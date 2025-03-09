@@ -10,6 +10,7 @@ script/source = "extends CharacterBody2D
 @export var movement_data : PlayerMovementData
  
 var air_jump = false
+var just_wall_jumped = false
 var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
@@ -19,7 +20,8 @@ var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 func _physics_process(delta):
 	apply_gravity(delta) 
 	handle_jump()
-	var input_axis := Input.get_axis(\"ui_left\", \"ui_right\") 
+	handle_wall_jump()
+	var input_axis := Input.get_axis(\"move_left\", \"move_right\") 
 	handle_air_acceleration(input_axis, delta)
 	handle_acceleration(input_axis, delta)
 	apply_friction(input_axis, delta)
@@ -36,18 +38,33 @@ func apply_gravity(delta):
 	if not is_on_floor():
 		velocity.y += gravity * movement_data.gravity_scale * delta 
  
+func handle_wall_jump():
+	if is_on_floor(): return
+	if not is_on_wall(): return
+	var wall_normal = get_wall_normal()
+	if Input.is_action_just_pressed(\"move_left\") and wall_normal == Vector2.LEFT:
+		velocity.x = wall_normal.x * movement_data.speed 
+		velocity.y = movement_data.jump_velocity * 0.8
+	
+		
+	if Input.is_action_just_pressed(\"move_right\") and wall_normal == Vector2.RIGHT:
+		velocity.x = wall_normal.x * movement_data.speed 
+		velocity.y = movement_data.jump_velocity * 0.8
+	
+
+
 func handle_jump(): 
 	if is_on_floor(): air_jump = true
 	
 	if  is_on_floor() or coyote_jump_timer.time_left > 0.0:
-		if Input.is_action_just_pressed(\"ui_accept\"): 
+		if Input.is_action_just_pressed(\"jump\"): 
 			velocity.y = movement_data.jump_velocity
 	if not is_on_floor(): 
-		if Input.is_action_just_pressed(\"ui_accept\") and velocity.y < movement_data.jump_velocity/ 2 : 
+		if Input.is_action_just_pressed(\"jump\") and velocity.y < movement_data.jump_velocity/ 2 : 
 			velocity.y = movement_data.jump_velocity / 1.2 
 		
-		if Input.is_action_just_pressed(\"ui_accept\") and air_jump:
-			velocity.y = movement_data.jump_velocity 
+		if Input.is_action_just_pressed(\"jump\") and air_jump:
+			velocity.y = movement_data.jump_velocity * 0.8
 			air_jump = false
 
 
@@ -183,11 +200,13 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0mxds"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lg0ke"]
 size = Vector2(20, 28)
 
 [node name="Player" type="CharacterBody2D"]
 floor_constant_speed = true
+floor_max_angle = 1.22173
+floor_snap_length = 5.0
 script = SubResource("GDScript_bm4dc")
 movement_data = ExtResource("1_jkio6")
 
@@ -200,8 +219,8 @@ frame = 1
 frame_progress = 0.572766
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -14)
-shape = SubResource("RectangleShape2D_0mxds")
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_lg0ke")
 
 [node name="CoyoteJumpTimer" type="Timer" parent="."]
 wait_time = 0.2
