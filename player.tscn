@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=17 format=3 uid="uid://x5vhp4acp7vh"]
+=======
+[gd_scene load_steps=19 format=3 uid="uid://x5vhp4acp7vh"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://bgmtvtyg1wqu1" path="res://Movement-Sheet.png" id="1_okksx"]
 
@@ -53,6 +57,10 @@ func update_animations(input_axis):
 	
 	if not is_on_floor():
 		animated_sprite_2d.play(\"jump\")
+
+
+func _on_hazard_detector_area_entered(area: Area2D) -> void:
+	queue_free()
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jxevx"]
@@ -160,7 +168,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0mxds"]
 size = Vector2(22, 30)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mch1"]
+size = Vector2(12, 24)
+
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
 floor_constant_speed = true
 floor_snap_length = 2.0
 script = SubResource("GDScript_bm4dc")
@@ -172,5 +184,25 @@ sprite_frames = SubResource("SpriteFrames_lhb2p")
 animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+<<<<<<< Updated upstream
 position = Vector2(0, -14)
 shape = SubResource("RectangleShape2D_0mxds")
+=======
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_lg0ke")
+
+[node name="CoyoteJumpTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="HazardDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardDetector"]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_2mch1")
+debug_color = Color(0.956591, 0.125623, 0.424824, 0.42)
+
+[connection signal="area_entered" from="HazardDetector" to="." method="_on_hazard_detector_area_entered"]
+>>>>>>> Stashed changes

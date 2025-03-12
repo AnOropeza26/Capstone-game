@@ -1,18 +1,24 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=3 format=3 uid="uid://revjw73co7sl"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://revjw73co7sl"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://world.gd" id="1_jkch7"]
 [ext_resource type="PackedScene" uid="uid://x5vhp4acp7vh" path="res://player.tscn" id="2_mi63y"]
+[ext_resource type="PackedScene" uid="uid://bntvkwb4idxol" path="res://spikes.tscn" id="3_e0q5l"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_jkch7")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-160, -40)
+collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-84.875, 49.4656)
 scale = Vector2(1.76172, 1.69956)
-polygon = PackedVector2Array(0, 0, 24, 0, 24, 120, 48, 120, 80, 144, 112, 144, 128, 120, 144, 120, 144, 152, 168, 152, 168, 128, 192, 128, 192, 128, 232, 128, 248, 104, 272, 104, 272, 128, 296, 128, 296, 0, 320, 0, 320, 184, 0, 184)
+polygon = PackedVector2Array(0, 0, 24, 0, 24, 120, 48, 120, 80, 144, 112, 144, 128, 120, 144, 120, 144, 152, 168, 152, 168, 128, 192, 128, 192, 128, 232, 128, 248, 104, 267.849, 103.871, 267.849, 127.995, 296, 128, 296, 0, 320, 0, 320, 184, 0, 184)
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
 
@@ -20,3 +26,48 @@ polygon = PackedVector2Array(0, 0, 24, 0, 24, 120, 48, 120, 80, 144, 112, 144, 1
 position = Vector2(-176, 200)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+<<<<<<< Updated upstream
+=======
+position = Vector2(0, -32)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(214, 85)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-25, -14)
+shape = SubResource("RectangleShape2D_dabxj")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2/CollisionShape2D"]
+offset_left = -18.0
+offset_top = -61.0
+offset_right = 20.0
+offset_bottom = 62.0
+
+[node name="Spikes" parent="." instance=ExtResource("3_e0q5l")]
+position = Vector2(8, 268)
+
+[node name="Spikes2" parent="." instance=ExtResource("3_e0q5l")]
+position = Vector2(18, 268)
+
+[node name="Spikes3" parent="." instance=ExtResource("3_e0q5l")]
+position = Vector2(29, 268)
+
+[node name="Spikes4" parent="." instance=ExtResource("3_e0q5l")]
+position = Vector2(39, 268)
+
+[node name="Spikes5" parent="." instance=ExtResource("3_e0q5l")]
+position = Vector2(226, 228)
+
+[node name="Spikes6" parent="." instance=ExtResource("3_e0q5l")]
+position = Vector2(237, 228)
+
+[node name="Spikes7" parent="." instance=ExtResource("3_e0q5l")]
+position = Vector2(248, 228)
+
+[node name="Spikes8" parent="." instance=ExtResource("3_e0q5l")]
+position = Vector2(259, 228)
+
+[node name="Spikes9" parent="." instance=ExtResource("3_e0q5l")]
+position = Vector2(267, 228)
+>>>>>>> Stashed changes
