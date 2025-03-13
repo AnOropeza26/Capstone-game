@@ -1,6 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://x5vhp4acp7vh"]
+[gd_scene load_steps=19 format=3 uid="uid://dohhcpdikvwah"]
 
-[ext_resource type="Resource" uid="uid://bj7jqgumi54rc" path="res://DefaultMovementData.tres" id="1_jkio6"]
+[ext_resource type="Resource" uid="uid://bd2j8ssev6lp5" path="res://DefaultMovementData.tres" id="1_jkio6"]
 [ext_resource type="Texture2D" uid="uid://bgmtvtyg1wqu1" path="res://Movement-Sheet.png" id="1_okksx"]
 
 [sub_resource type="GDScript" id="GDScript_bm4dc"]
@@ -15,7 +15,7 @@ var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_jump_timer: Timer = $CoyoteJumpTimer
-
+@onready var starting_position = global_position
 
 func _physics_process(delta):
 	apply_gravity(delta) 
@@ -59,7 +59,7 @@ func handle_jump():
 	if  is_on_floor() or coyote_jump_timer.time_left > 0.0:
 		if Input.is_action_just_pressed(\"jump\"): 
 			velocity.y = movement_data.jump_velocity
-	if not is_on_floor(): 
+	elif not is_on_floor(): 
 		if Input.is_action_just_pressed(\"jump\") and velocity.y < movement_data.jump_velocity/ 2 : 
 			velocity.y = movement_data.jump_velocity / 1.2 
 		
@@ -96,6 +96,10 @@ func update_animations(input_axis):
 	
 	if not is_on_floor():
 		animated_sprite_2d.play(\"jump\")
+
+
+func _on_hazard_detector_area_entered(area: Area2D) -> void:
+	global_position = starting_position 
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jxevx"]
@@ -203,7 +207,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lg0ke"]
 size = Vector2(20, 28)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uytk"]
+size = Vector2(14.5, 20)
+
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
 floor_constant_speed = true
 floor_max_angle = 1.22173
 floor_snap_length = 5.0
@@ -225,3 +233,14 @@ shape = SubResource("RectangleShape2D_lg0ke")
 [node name="CoyoteJumpTimer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+
+[node name="HazardDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardDetector"]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_5uytk")
+debug_color = Color(0, 0.623833, 0.186367, 0.42)
+
+[connection signal="area_entered" from="HazardDetector" to="." method="_on_hazard_detector_area_entered"]
