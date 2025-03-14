@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://world.gd" id="1_jkch7"]
 [ext_resource type="PackedScene" path="res://player.tscn" id="2_mi63y"]
-[ext_resource type="PackedScene" uid="uid://bntvkwb4idxol" path="res://spikes.tscn" id="3_4l7vh"]
+[ext_resource type="PackedScene" uid="uid://cuxai3hmfxv47" path="res://real_spikes.tscn" id="3_msaqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dabxj"]
 size = Vector2(37, 122)
@@ -19,9 +19,6 @@ scale = Vector2(1.76172, 1.69956)
 polygon = PackedVector2Array(0, 0, 24, 0, 24, 120, 48, 120, 80, 144, 112, 144, 128, 120, 144, 120, 144, 152, 169.721, 151.804, 169.65, 127.995, 192, 128, 192, 128, 232, 128, 248, 104, 268.984, 103.871, 268.417, 128.583, 296, 128, 296, 0, 320, 0, 320, 184, 0, 184)
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
-
-[node name="Spikes" parent="StaticBody2D" instance=ExtResource("3_4l7vh")]
-position = Vector2(198, 309)
 
 [node name="Player" parent="." instance=ExtResource("2_mi63y")]
 position = Vector2(-176, 200)
@@ -44,17 +41,14 @@ offset_top = -61.0
 offset_right = 20.0
 offset_bottom = 62.0
 
-[node name="Spikes" parent="." instance=ExtResource("3_4l7vh")]
-position = Vector2(227, 229)
+[node name="RealSpikes" parent="." instance=ExtResource("3_msaqw")]
+position = Vector2(23, 268)
 
-[node name="Spikes2" parent="." instance=ExtResource("3_4l7vh")]
-position = Vector2(243, 229)
+[node name="RealSpikes2" parent="." instance=ExtResource("3_msaqw")]
+position = Vector2(37, 268)
 
-[node name="Spikes3" parent="." instance=ExtResource("3_4l7vh")]
-position = Vector2(259, 229)
+[node name="RealSpikes3" parent="." instance=ExtResource("3_msaqw")]
+position = Vector2(242, 227)
 
-[node name="Spikes4" parent="." instance=ExtResource("3_4l7vh")]
-position = Vector2(8, 269)
-
-[node name="Spikes5" parent="." instance=ExtResource("3_4l7vh")]
-position = Vector2(23, 269)
+[node name="RealSpikes4" parent="." instance=ExtResource("3_msaqw")]
+position = Vector2(264, 227)
