@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://dohhcpdikvwah"]
+[gd_scene load_steps=19 format=3 uid="uid://x5vhp4acp7vh"]
 
-[ext_resource type="Resource" uid="uid://bd2j8ssev6lp5" path="res://DefaultMovementData.tres" id="1_jkio6"]
+[ext_resource type="Resource" uid="uid://bj7jqgumi54rc" path="res://DefaultMovementData.tres" id="1_jkio6"]
 [ext_resource type="Texture2D" uid="uid://bgmtvtyg1wqu1" path="res://Movement-Sheet.png" id="1_okksx"]
 
 [sub_resource type="GDScript" id="GDScript_bm4dc"]
