@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://dohhcpdikvwah"]
+[gd_scene load_steps=32 format=3 uid="uid://dohhcpdikvwah"]
 
-[ext_resource type="Resource" uid="uid://bd2j8ssev6lp5" path="res://DefaultMovementData.tres" id="1_jkio6"]
+[ext_resource type="Resource" uid="uid://bj7jqgumi54rc" path="res://DefaultMovementData.tres" id="1_jkio6"]
 [ext_resource type="Texture2D" uid="uid://bgmtvtyg1wqu1" path="res://Movement-Sheet.png" id="1_okksx"]
+[ext_resource type="Texture2D" uid="uid://b21dhx1cdblfu" path="res://PlayerIdle-Sheet-export.png" id="3_vscle"]
 
 [sub_resource type="GDScript" id="GDScript_bm4dc"]
 script/source = "extends CharacterBody2D
@@ -106,6 +107,54 @@ func _on_hazard_detector_area_entered(area: Area2D) -> void:
 atlas = ExtResource("1_okksx")
 region = Rect2(3840, 0, 640, 640)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnm8a"]
+atlas = ExtResource("3_vscle")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0rlq"]
+atlas = ExtResource("3_vscle")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkiic"]
+atlas = ExtResource("3_vscle")
+region = Rect2(1280, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4wdp"]
+atlas = ExtResource("3_vscle")
+region = Rect2(1920, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4uip"]
+atlas = ExtResource("3_vscle")
+region = Rect2(2560, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkw7d"]
+atlas = ExtResource("3_vscle")
+region = Rect2(3200, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fufsm"]
+atlas = ExtResource("3_vscle")
+region = Rect2(3840, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0df0j"]
+atlas = ExtResource("3_vscle")
+region = Rect2(4480, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvhfl"]
+atlas = ExtResource("3_vscle")
+region = Rect2(5120, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8vn1"]
+atlas = ExtResource("3_vscle")
+region = Rect2(5760, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fml6i"]
+atlas = ExtResource("3_vscle")
+region = Rect2(6400, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0s0lk"]
+atlas = ExtResource("3_vscle")
+region = Rect2(7040, 0, 640, 640)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_o6edt"]
 atlas = ExtResource("1_okksx")
 region = Rect2(7040, 0, 640, 640)
@@ -155,6 +204,42 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jxevx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnm8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0rlq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkiic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4wdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4uip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkw7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fufsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0df0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvhfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8vn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fml6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0s0lk")
 }],
 "loop": true,
 "name": &"idle",
@@ -222,9 +307,7 @@ movement_data = ExtResource("1_jkio6")
 position = Vector2(0, -20)
 scale = Vector2(0.1, 0.099)
 sprite_frames = SubResource("SpriteFrames_lhb2p")
-animation = &"run"
-frame = 1
-frame_progress = 0.572766
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -15)
