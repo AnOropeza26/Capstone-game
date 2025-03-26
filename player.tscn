@@ -1,7 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://dohhcpdikvwah"]
+[gd_scene load_steps=34 format=3 uid="uid://dohhcpdikvwah"]
 
 [ext_resource type="Resource" uid="uid://bd2j8ssev6lp5" path="res://DefaultMovementData.tres" id="1_jkio6"]
 [ext_resource type="Texture2D" uid="uid://bgmtvtyg1wqu1" path="res://Movement-Sheet.png" id="1_okksx"]
+[ext_resource type="Texture2D" uid="uid://bysv5nm4l4esx" path="res://icon.svg" id="2_hgk5g"]
+[ext_resource type="Texture2D" uid="uid://b21dhx1cdblfu" path="res://PlayerIdle-Sheet-export.png" id="3_mm24y"]
 
 [sub_resource type="GDScript" id="GDScript_bm4dc"]
 script/source = "extends CharacterBody2D
@@ -9,6 +11,7 @@ script/source = "extends CharacterBody2D
 
 @export var movement_data : PlayerMovementData
  
+var is_dying = false
 var air_jump = false
 var just_wall_jumped = false
 var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
@@ -16,8 +19,15 @@ var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_jump_timer: Timer = $CoyoteJumpTimer
 @onready var starting_position = global_position
+@onready var death_timer: Timer = $DeathTimer
+
+func _ready():
+	death_timer.connect(\"timeout\", Callable(self, \"_on_DeathTimer_timeout\"))
+
 
 func _physics_process(delta):
+	if is_dying:
+		return
 	apply_gravity(delta) 
 	handle_jump()
 	handle_wall_jump()
@@ -88,6 +98,8 @@ func apply_air_resistance(input_axis, delta):
 		velocity.x = move_toward(velocity.x, 0, movement_data.air_resistance * delta)
 
 func update_animations(input_axis):
+	if is_dying:
+		return
 	if input_axis != 0:
 		animated_sprite_2d.flip_h = (input_axis < 0)
 		animated_sprite_2d.play(\"run\")
@@ -99,12 +111,88 @@ func update_animations(input_axis):
 
 
 func _on_hazard_detector_area_entered(area: Area2D) -> void:
-	global_position = starting_position 
+	
+	die()
+
+
+func die():
+	if is_dying:
+		return
+	
+	is_dying = true
+	animated_sprite_2d.play(\"die\")
+	await move_player_up_and_down()
+	get_tree().reload_current_scene()
+
+
+func move_player_up_and_down():
+	var starting_position = position
+	var up_position = starting_position + Vector2(0, -100)
+	var down_position = starting_position + Vector2(0, 600)
+	
+	while position.y > up_position.y:
+		position.y -= 4
+		await get_tree().create_timer(0.02).timeout
+
+func on_DeathTimer_timeout():
+	get_tree().reload_current_scene()
 "
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5an6"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jxevx"]
 atlas = ExtResource("1_okksx")
 region = Rect2(3840, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tu12j"]
+atlas = ExtResource("3_mm24y")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxr28"]
+atlas = ExtResource("3_mm24y")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnay4"]
+atlas = ExtResource("3_mm24y")
+region = Rect2(1280, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bjsl"]
+atlas = ExtResource("3_mm24y")
+region = Rect2(1920, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h68ko"]
+atlas = ExtResource("3_mm24y")
+region = Rect2(2560, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7lra"]
+atlas = ExtResource("3_mm24y")
+region = Rect2(3200, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7x70d"]
+atlas = ExtResource("3_mm24y")
+region = Rect2(3840, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xypvy"]
+atlas = ExtResource("3_mm24y")
+region = Rect2(4480, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ol7um"]
+atlas = ExtResource("3_mm24y")
+region = Rect2(5120, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyifi"]
+atlas = ExtResource("3_mm24y")
+region = Rect2(5760, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjd3i"]
+atlas = ExtResource("3_mm24y")
+region = Rect2(6400, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oo58l"]
+atlas = ExtResource("3_mm24y")
+region = Rect2(7040, 0, 640, 640)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o6edt"]
 atlas = ExtResource("1_okksx")
@@ -154,11 +242,55 @@ region = Rect2(6400, 0, 640, 640)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_k5an6")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_jxevx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tu12j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxr28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnay4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bjsl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h68ko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7lra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7x70d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xypvy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ol7um")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyifi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjd3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oo58l")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 18.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -218,13 +350,14 @@ floor_snap_length = 5.0
 script = SubResource("GDScript_bm4dc")
 movement_data = ExtResource("1_jkio6")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -30)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -20)
 scale = Vector2(0.1, 0.099)
 sprite_frames = SubResource("SpriteFrames_lhb2p")
-animation = &"run"
-frame = 1
-frame_progress = 0.572766
+animation = &"die"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -15)
@@ -242,5 +375,7 @@ collision_mask = 4
 position = Vector2(0, -15)
 shape = SubResource("RectangleShape2D_5uytk")
 debug_color = Color(0, 0.623833, 0.186367, 0.42)
+
+[node name="DeathTimer" type="Timer" parent="."]
 
 [connection signal="area_entered" from="HazardDetector" to="." method="_on_hazard_detector_area_entered"]
