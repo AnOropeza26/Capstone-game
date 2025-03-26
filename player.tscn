@@ -1,6 +1,6 @@
 [gd_scene load_steps=34 format=3 uid="uid://dohhcpdikvwah"]
 
-[ext_resource type="Resource" uid="uid://bd2j8ssev6lp5" path="res://DefaultMovementData.tres" id="1_jkio6"]
+[ext_resource type="Resource" path="res://DefaultMovementData.tres" id="1_jkio6"]
 [ext_resource type="Texture2D" uid="uid://bgmtvtyg1wqu1" path="res://Movement-Sheet.png" id="1_okksx"]
 [ext_resource type="Texture2D" uid="uid://bysv5nm4l4esx" path="res://icon.svg" id="2_hgk5g"]
 [ext_resource type="Texture2D" uid="uid://b21dhx1cdblfu" path="res://PlayerIdle-Sheet-export.png" id="3_mm24y"]
@@ -111,31 +111,38 @@ func update_animations(input_axis):
 
 
 func _on_hazard_detector_area_entered(area: Area2D) -> void:
+	await die()
+	on_DeathTimer_timeout()
 	
-	die()
 
 
 func die():
 	if is_dying:
 		return
-	
 	is_dying = true
 	animated_sprite_2d.play(\"die\")
-	await move_player_up_and_down()
-	get_tree().reload_current_scene()
+	await move_player_up()
+	smooth_transition()
 
 
-func move_player_up_and_down():
+func smooth_transition():
+	
+	global_position = starting_position
+	
+
+func move_player_up():
 	var starting_position = position
-	var up_position = starting_position + Vector2(0, -100)
-	var down_position = starting_position + Vector2(0, 600)
+	var up_position = starting_position + Vector2(0, -150)
 	
 	while position.y > up_position.y:
 		position.y -= 4
 		await get_tree().create_timer(0.02).timeout
 
 func on_DeathTimer_timeout():
-	get_tree().reload_current_scene()
+	await  smooth_transition()
+	if starting_position and is_dying:
+		get_tree().reload_current_scene()
+	
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k5an6"]
@@ -352,6 +359,7 @@ movement_data = ExtResource("1_jkio6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -30)
+position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -20)
