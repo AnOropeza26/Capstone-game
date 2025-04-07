@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://revjw73co7sl"]
+[gd_scene load_steps=7 format=3 uid="uid://b8ocikp13ut6h"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_jkch7"]
-[ext_resource type="PackedScene" uid="uid://x5vhp4acp7vh" path="res://player.tscn" id="2_mi63y"]
+[ext_resource type="PackedScene" uid="uid://dohhcpdikvwah" path="res://player.tscn" id="2_mi63y"]
 [ext_resource type="PackedScene" uid="uid://th5ij7j4721j" path="res://spikes.tscn" id="3_4l7vh"]
-[ext_resource type="PackedScene" uid="uid://dw05whrfl57r5" path="res:// heart.tscn" id="3_85t86"]
-[ext_resource type="PackedScene" uid="uid://v303fc631w0" path="res://level_completed.tscn" id="5_64qqe"]
+[ext_resource type="PackedScene" uid="uid://bpkiyr2mr3r5p" path="res:// heart.tscn" id="3_85t86"]
+[ext_resource type="PackedScene" uid="uid://cchjaw72ru86h" path="res://level_completed.tscn" id="5_64qqe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dabxj"]
 size = Vector2(37, 122)
@@ -62,13 +62,14 @@ position = Vector2(8, 269)
 position = Vector2(23, 269)
 
 [node name="Heart" parent="." instance=ExtResource("3_85t86")]
-position = Vector2(-9, 143)
+position = Vector2(253, 61)
+scale = Vector2(1, 0.944692)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="LevelCompleted" parent="CanvasLayer" instance=ExtResource("5_64qqe")]
 visible = false
-offset_left = -227.0
-offset_top = -18.0
-offset_right = -114.0
-offset_bottom = 11.0
+offset_left = -47.0
+offset_top = -5.0
+offset_right = 61.0
+offset_bottom = 20.0

@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://v303fc631w0"]
+[gd_scene load_steps=2 format=3 uid="uid://cchjaw72ru86h"]
+
+[ext_resource type="Script" path="res://level_completed.gd" id="1_pey73"]
 
 [node name="LevelCompleted" type="ColorRect"]
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.180392)
+script = ExtResource("1_pey73")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
