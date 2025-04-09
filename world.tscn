@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://world.gd" id="1_jkch7"]
 [ext_resource type="PackedScene" uid="uid://dohhcpdikvwah" path="res://player.tscn" id="2_mi63y"]
-[ext_resource type="PackedScene" path="res:// heart.tscn" id="3_85t86"]
+[ext_resource type="PackedScene" uid="uid://bpkiyr2mr3r5p" path="res:// heart.tscn" id="3_85t86"]
 [ext_resource type="PackedScene" uid="uid://cuxai3hmfxv47" path="res://real_spikes.tscn" id="3_msaqw"]
-[ext_resource type="PackedScene" path="res://level_completed.tscn" id="5_64qqe"]
+[ext_resource type="PackedScene" uid="uid://cchjaw72ru86h" path="res://level_completed.tscn" id="5_64qqe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dabxj"]
 size = Vector2(37, 122)
@@ -60,13 +60,19 @@ offset_bottom = 20.0
 position = Vector2(24, 267)
 
 [node name="RealSpikes2" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(38, 267)
+position = Vector2(42, 267)
 
 [node name="RealSpikes3" parent="." instance=ExtResource("3_msaqw")]
 position = Vector2(241, 228)
 
 [node name="RealSpikes4" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(255, 228)
+position = Vector2(259, 228)
 
 [node name="RealSpikes5" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(269, 228)
+position = Vector2(266, 228)
+
+[node name="Heart2" parent="." instance=ExtResource("3_85t86")]
+position = Vector2(139, 181)
+
+[node name="Heart3" parent="." instance=ExtResource("3_85t86")]
+position = Vector2(-57, 209)
