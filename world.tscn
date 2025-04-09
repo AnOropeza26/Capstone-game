@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8ocikp13ut6h"]
+[gd_scene load_steps=9 format=3 uid="uid://b8ocikp13ut6h"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_jkch7"]
 [ext_resource type="PackedScene" uid="uid://dohhcpdikvwah" path="res://player.tscn" id="2_mi63y"]
 [ext_resource type="PackedScene" uid="uid://bpkiyr2mr3r5p" path="res:// heart.tscn" id="3_85t86"]
+[ext_resource type="PackedScene" uid="uid://c3d05o270w113" path="res://canvas_layer_test.tscn" id="3_bkwvn"]
 [ext_resource type="PackedScene" uid="uid://cuxai3hmfxv47" path="res://real_spikes.tscn" id="3_msaqw"]
 [ext_resource type="PackedScene" uid="uid://cchjaw72ru86h" path="res://level_completed.tscn" id="5_64qqe"]
 [ext_resource type="PackedScene" uid="uid://hadlym7h4scs" path="res://scroll.tscn" id="6_egm3i"]
@@ -19,12 +20,14 @@ position = Vector2(-160, -40)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-85, 49)
 scale = Vector2(1.76172, 1.69956)
-polygon = PackedVector2Array(0, 0, 24, 0, 24, 120, 48, 120, 80, 144, 112, 144, 128, 120, 144, 120, 144, 152, 169.721, 151.804, 169.65, 127.995, 192, 128, 192, 128, 232, 128, 248, 104, 268.984, 103.871, 268.417, 128.583, 296, 128, 296, 0, 320, 0, 320, 184, 0, 184)
+polygon = PackedVector2Array(0, 0, 24, 0, 24, 120, 48, 120, 80, 144, 112, 144, 128, 120, 144, 120, 144, 152, 177.667, 151.804, 177.667, 128.268, 192, 128, 192, 128, 232, 128, 248, 104, 265.082, 104.145, 263.947, 128.268, 296, 128, 296, 0, 320, 0, 320, 184, 0, 184)
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_mi63y")]
 position = Vector2(-176, 200)
+
+[node name="CanvasLayerTest" parent="Player" instance=ExtResource("3_bkwvn")]
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 position = Vector2(0, -32)
@@ -61,19 +64,19 @@ offset_bottom = 20.0
 position = Vector2(24, 267)
 
 [node name="RealSpikes2" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(42, 267)
-
-[node name="RealSpikes3" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(241, 228)
-
-[node name="RealSpikes4" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(259, 228)
-
-[node name="RealSpikes5" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(266, 228)
+position = Vector2(53, 267)
 
 [node name="scroll" parent="." instance=ExtResource("6_egm3i")]
 position = Vector2(-92, 234)
 
 [node name="scroll2" parent="." instance=ExtResource("6_egm3i")]
 position = Vector2(108, 205)
+
+[node name="RealSpikes3" parent="." instance=ExtResource("3_msaqw")]
+position = Vector2(249, 227)
+
+[node name="RealSpikes4" parent="." instance=ExtResource("3_msaqw")]
+position = Vector2(263, 227)
+
+[node name="RealSpikes5" parent="." instance=ExtResource("3_msaqw")]
+position = Vector2(235, 227)

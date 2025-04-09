@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://v5q8w864tuk"]
+
+[ext_resource type="Script" path="res://bombtimer.gd" id="1_f233y"]
+
+[node name="Bombtimer" type="Node"]
+script = ExtResource("1_f233y")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "
+"
+metadata/_edit_use_anchors_ = true

@@ -14,4 +14,4 @@ texture = ExtResource("1_wywby")
 [node name="HazardArea" parent="." instance=ExtResource("2_d2evm")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HazardArea"]
-polygon = PackedVector2Array(-14, 0, -8, -19, 0, 0, 6, -19, 13, 0)
+polygon = PackedVector2Array(-14, 0, 13, 0, 4, -19, -5, -19)

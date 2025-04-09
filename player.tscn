@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dohhcpdikvwah"]
+[gd_scene load_steps=35 format=3 uid="uid://dohhcpdikvwah"]
 
 [ext_resource type="Resource" uid="uid://bj7jqgumi54rc" path="res://DefaultMovementData.tres" id="1_jkio6"]
 [ext_resource type="Texture2D" uid="uid://bgmtvtyg1wqu1" path="res://Movement-Sheet.png" id="1_okksx"]
@@ -11,6 +11,7 @@ script/source = "extends CharacterBody2D
 
 @export var movement_data : PlayerMovementData
  
+
 var is_dying = false
 var air_jump = false
 var just_wall_jumped = false
@@ -123,6 +124,12 @@ func die():
 	animated_sprite_2d.play(\"die\")
 	await move_player_up()
 	smooth_transition()
+	
+func die_from_bomb():
+	pass
+	
+	
+	
 
 
 func smooth_transition():
@@ -146,6 +153,10 @@ func on_DeathTimer_timeout():
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k5an6"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5b1hv"]
 atlas = ExtResource("2_hgk5g")
 region = Rect2(0, 0, 128, 128)
 
@@ -253,6 +264,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5b1hv")
+}],
+"loop": true,
+"name": &"explode",
 "speed": 5.0
 }, {
 "frames": [{
@@ -365,7 +384,7 @@ position_smoothing_enabled = true
 position = Vector2(0, -20)
 scale = Vector2(0.1, 0.099)
 sprite_frames = SubResource("SpriteFrames_lhb2p")
-animation = &"die"
+animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -15)

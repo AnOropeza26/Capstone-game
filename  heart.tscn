@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cjvc8uecqvy80" path="res://Capstone Heart collectible-Sheet.png" id="2_6tc87"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cpcoh"]
-radius = 18.1108
+radius = 13.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wl0en"]
 atlas = ExtResource("2_6tc87")
@@ -72,12 +72,12 @@ script = ExtResource("1_6c1rs")
 shape = SubResource("CircleShape2D_cpcoh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(7.62939e-06, 9.53674e-07)
-scale = Vector2(0.1, 0.1)
+position = Vector2(0, -9.53674e-07)
+scale = Vector2(0.07, 0.064)
 sprite_frames = SubResource("SpriteFrames_q7ksj")
 animation = &"heartpumping"
 autoplay = "heartpumping"
-frame = 6
-frame_progress = 0.0215743
+frame = 5
+frame_progress = 0.505537
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
