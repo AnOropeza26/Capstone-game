@@ -1,9 +1,14 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=34 format=3 uid="uid://dohhcpdikvwah"]
+=======
+[gd_scene load_steps=36 format=3 uid="uid://dohhcpdikvwah"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Resource" path="res://DefaultMovementData.tres" id="1_jkio6"]
 [ext_resource type="Texture2D" uid="uid://bgmtvtyg1wqu1" path="res://Movement-Sheet.png" id="1_okksx"]
 [ext_resource type="Texture2D" uid="uid://bysv5nm4l4esx" path="res://icon.svg" id="2_hgk5g"]
 [ext_resource type="Texture2D" uid="uid://b21dhx1cdblfu" path="res://PlayerIdle-Sheet-export.png" id="3_mm24y"]
+[ext_resource type="PackedScene" uid="uid://v5q8w864tuk" path="res://bombtimer.tscn" id="5_ftmo1"]
 
 [sub_resource type="GDScript" id="GDScript_bm4dc"]
 script/source = "extends CharacterBody2D
@@ -20,6 +25,12 @@ var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 @onready var coyote_jump_timer: Timer = $CoyoteJumpTimer
 @onready var starting_position = global_position
 @onready var death_timer: Timer = $DeathTimer
+
+
+
+
+
+
 
 func _ready():
 	death_timer.connect(\"timeout\", Callable(self, \"_on_DeathTimer_timeout\"))
@@ -123,6 +134,18 @@ func die():
 	animated_sprite_2d.play(\"die\")
 	await move_player_up()
 	smooth_transition()
+<<<<<<< Updated upstream
+=======
+	
+
+func die_from_bomb():
+	pass
+	if is_dying:
+		return
+	is_dying = true
+	animated_sprite_2d.play(\"explode\")
+	
+>>>>>>> Stashed changes
 
 
 func smooth_transition():
@@ -139,10 +162,16 @@ func move_player_up():
 		await get_tree().create_timer(0.02).timeout
 
 func on_DeathTimer_timeout():
-	await  smooth_transition()
-	if starting_position and is_dying:
+	if is_dying:
 		get_tree().reload_current_scene()
 	
+
+func kaboom():
+	pass
+
+
+func _on_timer_timeout() -> void:
+	die_from_bomb()
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k5an6"]
@@ -365,7 +394,11 @@ position_smoothing_enabled = true
 position = Vector2(0, -20)
 scale = Vector2(0.1, 0.099)
 sprite_frames = SubResource("SpriteFrames_lhb2p")
+<<<<<<< Updated upstream
 animation = &"die"
+=======
+animation = &"explode"
+>>>>>>> Stashed changes
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -15)
@@ -386,4 +419,19 @@ debug_color = Color(0, 0.623833, 0.186367, 0.42)
 
 [node name="DeathTimer" type="Timer" parent="."]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Bombtimer" parent="CanvasLayer" instance=ExtResource("5_ftmo1")]
+
+[node name="Label" type="Label" parent="CanvasLayer/Bombtimer"]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Bombtimer"]
+wait_time = 10.0
+one_shot = true
+
 [connection signal="area_entered" from="HazardDetector" to="." method="_on_hazard_detector_area_entered"]
+[connection signal="timeout" from="CanvasLayer/Bombtimer/Timer" to="." method="_on_timer_timeout"]

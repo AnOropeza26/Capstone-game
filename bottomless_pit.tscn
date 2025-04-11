@@ -7,6 +7,6 @@
 [node name="HazardArea" parent="." instance=ExtResource("1_3mj81")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HazardArea"]
-position = Vector2(36.8, 0)
-scale = Vector2(1.95833, 1)
-polygon = PackedVector2Array(-24, -3, 24, -3, 24, 1, -24, 1)
+position = Vector2(710.3, 7.0875)
+scale = Vector2(19.4974, 2.6875)
+polygon = PackedVector2Array(-24, -3, 24, -3, 24, 1, -22.379, 1, -24, 1)

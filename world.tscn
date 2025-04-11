@@ -2,8 +2,16 @@
 
 [ext_resource type="Script" path="res://world.gd" id="1_jkch7"]
 [ext_resource type="PackedScene" uid="uid://dohhcpdikvwah" path="res://player.tscn" id="2_mi63y"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://cuxai3hmfxv47" path="res://real_spikes.tscn" id="3_msaqw"]
 [ext_resource type="PackedScene" uid="uid://dqvn8ox5xtowe" path="res://bottomless_pit.tscn" id="4_pavj7"]
+=======
+[ext_resource type="PackedScene" uid="uid://bpkiyr2mr3r5p" path="res:// heart.tscn" id="3_85t86"]
+[ext_resource type="PackedScene" uid="uid://cuxai3hmfxv47" path="res://real_spikes.tscn" id="3_msaqw"]
+[ext_resource type="PackedScene" uid="uid://cchjaw72ru86h" path="res://level_completed.tscn" id="5_64qqe"]
+[ext_resource type="PackedScene" uid="uid://hadlym7h4scs" path="res://scroll.tscn" id="6_egm3i"]
+[ext_resource type="PackedScene" uid="uid://dqvn8ox5xtowe" path="res://bottomless_pit.tscn" id="8_3add8"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dabxj"]
 size = Vector2(37, 122)
@@ -24,6 +32,14 @@ polygon = PackedVector2Array(0, 0, 24, 0, 24, 120, 48, 120, 80, 144, 112, 144, 1
 [node name="Player" parent="." instance=ExtResource("2_mi63y")]
 position = Vector2(-176, 200)
 
+<<<<<<< Updated upstream
+=======
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+position = Vector2(0, -32)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
+>>>>>>> Stashed changes
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(214, 85)
 
@@ -53,7 +69,14 @@ position = Vector2(23, 267)
 position = Vector2(37, 267)
 
 [node name="RealSpikes5" parent="." instance=ExtResource("3_msaqw")]
+<<<<<<< Updated upstream
 position = Vector2(-88, 254)
 
 [node name="RealSpikes6" parent="." instance=ExtResource("3_msaqw")]
 position = Vector2(-74, 254)
+=======
+position = Vector2(235, 227)
+
+[node name="BottomlessPit" parent="." instance=ExtResource("8_3add8")]
+position = Vector2(78, 260)
+>>>>>>> Stashed changes
