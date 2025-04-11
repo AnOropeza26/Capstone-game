@@ -131,7 +131,7 @@ func die_from_bomb():
 		return
 	is_dying = true
 	animated_sprite_2d.play(\"explode\")
-	
+	get_tree().change_scene_to_file(\"res://Game_Over.tscn\")
 	
 	
 
@@ -172,7 +172,8 @@ func _on_timer_timeout() -> void:
 
 
 func _on_animated_sprite_2d_animation_finished() -> void:
-	get_tree().change_scene_to_file(\"res://start_menu.tscn\")
+	await die_from_bomb()
+	get_tree().change_scene_to_file(\"res://Game_Over.tscn\")
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k5an6"]
