@@ -4,14 +4,3 @@
 
 [node name="Bombtimer" type="Node"]
 script = ExtResource("1_f233y")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
-one_shot = true
-
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "
-"
-metadata/_edit_use_anchors_ = true

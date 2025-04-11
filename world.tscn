@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://b8ocikp13ut6h"]
+[gd_scene load_steps=8 format=3 uid="uid://b8ocikp13ut6h"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_jkch7"]
 [ext_resource type="PackedScene" uid="uid://dohhcpdikvwah" path="res://player.tscn" id="2_mi63y"]
 [ext_resource type="PackedScene" uid="uid://bpkiyr2mr3r5p" path="res:// heart.tscn" id="3_85t86"]
-[ext_resource type="PackedScene" uid="uid://c3d05o270w113" path="res://canvas_layer_test.tscn" id="3_bkwvn"]
 [ext_resource type="PackedScene" uid="uid://cuxai3hmfxv47" path="res://real_spikes.tscn" id="3_msaqw"]
 [ext_resource type="PackedScene" uid="uid://cchjaw72ru86h" path="res://level_completed.tscn" id="5_64qqe"]
 [ext_resource type="PackedScene" uid="uid://hadlym7h4scs" path="res://scroll.tscn" id="6_egm3i"]
@@ -26,8 +25,6 @@ polygon = PackedVector2Array(0, 0, 24, 0, 24, 120, 48, 120, 80, 144, 112, 144, 1
 
 [node name="Player" parent="." instance=ExtResource("2_mi63y")]
 position = Vector2(-176, 200)
-
-[node name="CanvasLayerTest" parent="Player" instance=ExtResource("3_bkwvn")]
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 position = Vector2(0, -32)
@@ -71,9 +68,6 @@ position = Vector2(-92, 234)
 
 [node name="scroll2" parent="." instance=ExtResource("6_egm3i")]
 position = Vector2(108, 205)
-
-[node name="RealSpikes3" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(249, 227)
 
 [node name="RealSpikes4" parent="." instance=ExtResource("3_msaqw")]
 position = Vector2(263, 227)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=35 format=3 uid="uid://dohhcpdikvwah"]
+[gd_scene load_steps=52 format=3 uid="uid://dohhcpdikvwah"]
 
 [ext_resource type="Resource" uid="uid://bj7jqgumi54rc" path="res://DefaultMovementData.tres" id="1_jkio6"]
 [ext_resource type="Texture2D" uid="uid://bgmtvtyg1wqu1" path="res://Movement-Sheet.png" id="1_okksx"]
 [ext_resource type="Texture2D" uid="uid://bysv5nm4l4esx" path="res://icon.svg" id="2_hgk5g"]
 [ext_resource type="Texture2D" uid="uid://b21dhx1cdblfu" path="res://PlayerIdle-Sheet-export.png" id="3_mm24y"]
+[ext_resource type="PackedScene" uid="uid://v5q8w864tuk" path="res://bombtimer.tscn" id="5_tpnx8"]
 
 [sub_resource type="GDScript" id="GDScript_bm4dc"]
 script/source = "extends CharacterBody2D
@@ -126,9 +127,14 @@ func die():
 	smooth_transition()
 	
 func die_from_bomb():
-	pass
+	if is_dying:
+		return
+	is_dying = true
+	animated_sprite_2d.play(\"explode\")
 	
 	
+	
+
 	
 
 
@@ -136,6 +142,11 @@ func smooth_transition():
 	
 	global_position = starting_position
 	
+
+
+
+
+
 
 func move_player_up():
 	var starting_position = position
@@ -150,6 +161,18 @@ func on_DeathTimer_timeout():
 	if starting_position and is_dying:
 		get_tree().reload_current_scene()
 	
+
+func kaboom():
+	pass
+
+
+func _on_timer_timeout() -> void:
+	die_from_bomb()
+	
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	get_tree().change_scene_to_file(\"res://start_menu.tscn\")
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k5an6"]
@@ -159,6 +182,70 @@ region = Rect2(0, 0, 128, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_5b1hv"]
 atlas = ExtResource("2_hgk5g")
 region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_was4l"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_boqfy"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl7wv"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8hda"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1o64"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otamc"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hr2sv"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uja7o"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6e3a"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvabb"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8h2u"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g866q"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5wmi"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfnlr"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pn54w"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axq03"]
+atlas = ExtResource("2_hgk5g")
+region = Rect2(96, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jxevx"]
 atlas = ExtResource("1_okksx")
@@ -269,6 +356,54 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5b1hv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_was4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_boqfy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl7wv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8hda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1o64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otamc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hr2sv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uja7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6e3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvabb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8h2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g866q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5wmi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfnlr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pn54w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axq03")
 }],
 "loop": true,
 "name": &"explode",
@@ -384,7 +519,7 @@ position_smoothing_enabled = true
 position = Vector2(0, -20)
 scale = Vector2(0.1, 0.099)
 sprite_frames = SubResource("SpriteFrames_lhb2p")
-animation = &"run"
+animation = &"explode"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -15)
@@ -405,4 +540,20 @@ debug_color = Color(0, 0.623833, 0.186367, 0.42)
 
 [node name="DeathTimer" type="Timer" parent="."]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Bombtimer" parent="CanvasLayer" instance=ExtResource("5_tpnx8")]
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Bombtimer"]
+wait_time = 10.0
+one_shot = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Bombtimer"]
+modulate = Color(1, 0, 0, 1)
+self_modulate = Color(1, 0, 0, 1)
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="HazardDetector" to="." method="_on_hazard_detector_area_entered"]
+[connection signal="timeout" from="CanvasLayer/Bombtimer/Timer" to="." method="_on_timer_timeout"]
