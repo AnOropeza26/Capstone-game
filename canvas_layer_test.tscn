@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3d05o270w113"]
+
+[ext_resource type="PackedScene" uid="uid://v5q8w864tuk" path="res://bombtimer.tscn" id="1_8q1if"]
+
+[node name="CanvasLayerTest" type="CanvasLayer"]
+
+[node name="Bombtimer" parent="." instance=ExtResource("1_8q1if")]
