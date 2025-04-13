@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpn74fv20jbhv"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_lakmw"]
+[ext_resource type="PackedScene" uid="uid://dohhcpdikvwah" path="res://player.tscn" id="2_0nquc"]
+[ext_resource type="PackedScene" path="res://level_completed.tscn" id="4_wq8pg"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_lakmw")
+
+[node name="Player" parent="." instance=ExtResource("2_0nquc")]
+position = Vector2(1, -1)
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+position = Vector2(0, -32)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelCompleted" parent="CanvasLayer" instance=ExtResource("4_wq8pg")]
+visible = false
+offset_left = -47.0
+offset_top = -5.0
+offset_right = 61.0
+offset_bottom = 20.0
