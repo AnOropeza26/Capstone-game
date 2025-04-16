@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcjr6ycr2p0xp"]
+[gd_scene load_steps=3 format=3 uid="uid://cuxai3hmfxv47"]
 
 [ext_resource type="Texture2D" uid="uid://cxpd5owitsesm" path="res://Spikescollectible.png" id="1_wywby"]
 [ext_resource type="PackedScene" uid="uid://eu21sm7mtr32" path="res://hazard_area.tscn" id="2_d2evm"]

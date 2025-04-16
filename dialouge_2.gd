@@ -7,7 +7,7 @@ extends Control
 var dialogue_items: Array[String] = [ 
 	"Erm hello can you hear me?", 
 	"I need YOUR assistance to help me make my SUPER NERDINATOR!!!", 
-	"If tou disobey my orders you will perish in the most scentific way possible an EXPLOSION", 
+	"If you disobey my orders you will perish in the most scentific way possible an EXPLOSION", 
 	"SO gather what I need....or you will be permenatley jelly!!!", 
 	]
 
