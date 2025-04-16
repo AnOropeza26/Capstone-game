@@ -1,14 +1,15 @@
 extends Control
 
+
 @onready var rich_text_label: RichTextLabel = %RichTextLabel
 @onready var next_button: Button = %NextButton   
 
 var dialogue_items: Array[String] = [ 
-	"Where am I?",  
-	"Who put me here!?",
-	"This place smells disgusting!!!", 
-	"I GOT to find a way out of HERE!",
-] 
+	"Erm hello can you hear me?", 
+	"I need YOUR assistance to help me make my SUPER NERDINATOR!!!", 
+	"If tou disobey my orders you will perish in the most scentific way possible an EXPLOSION", 
+	"SO gather what I need....or you will be permenatley jelly!!!", 
+	]
 
 var current_item_index := 0 
 
@@ -24,7 +25,7 @@ func advance() -> void:
 	current_item_index += 1 
 	
 	if current_item_index == dialogue_items.size(): 
-		get_tree().change_scene_to_file("res://world.tscn")
+		get_tree().change_scene_to_file("res://city.tscn")
 		
 
 

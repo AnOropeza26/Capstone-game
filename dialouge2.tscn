@@ -1,15 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dur7ltmn4xguj"]
+[gd_scene load_steps=3 format=3 uid="uid://cuxfmo03s1u15"]
 
-[ext_resource type="Theme" uid="uid://x6pdhugge88m" path="res://main_theme.tres" id="1_b14hj"]
-[ext_resource type="Script" path="res://dialouge.gd" id="2_n6a7n"]
+[ext_resource type="Theme" uid="uid://x6pdhugge88m" path="res://main_theme.tres" id="1_lu456"]
+[ext_resource type="Script" path="res://dialouge_2.gd" id="2_4ww6y"]
 
-[node name="Dialouge" type="Control"]
+[node name="Dialouge2" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 57.0
 offset_bottom = 55.0
-theme = ExtResource("1_b14hj")
-script = ExtResource("2_n6a7n")
+theme = ExtResource("1_lu456")
+script = ExtResource("2_4ww6y")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
@@ -21,7 +21,7 @@ offset_left = 69.0
 offset_top = 125.0
 offset_right = -150.222
 offset_bottom = -76.47
-theme = ExtResource("1_b14hj")
+theme = ExtResource("1_lu456")
 text = "  Hello world Im stuck in the sewer so take control of me   and get out! 3:"
 fit_content = true
 
@@ -40,5 +40,3 @@ offset_bottom = -40.99
 grow_horizontal = 0
 grow_vertical = 0
 text = "Next"
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
