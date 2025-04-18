@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3lkmcplvoai2"]
+[gd_scene load_steps=4 format=3 uid="uid://dbkt3d6iiahhp"]
 
 [ext_resource type="Theme" uid="uid://x6pdhugge88m" path="res://main_theme.tres" id="1_lu456"]
 [ext_resource type="Script" path="res://dialouge_2.gd" id="2_4ww6y"]
@@ -34,10 +34,10 @@ anchor_left = 0.107
 anchor_top = 0.306
 anchor_right = 7.902
 anchor_bottom = 5.018
-offset_left = 278.901
-offset_top = 201.17
-offset_right = -122.414
-offset_bottom = -30.99
+offset_left = 390.901
+offset_top = 226.17
+offset_right = -10.414
+offset_bottom = -5.99002
 grow_horizontal = 0
 grow_vertical = 0
 text = "Next"
