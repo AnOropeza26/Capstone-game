@@ -3,16 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://cpn74fv20jbhv" path="res://worldcopy.tscn" id="1_xss7w"]
 [ext_resource type="PackedScene" path="res://scroll.tscn" id="2_q5way"]
 [ext_resource type="PackedScene" uid="uid://cgk5o0g2a60g2" path="res://start_menu.tscn" id="2_yxx7a"]
-[ext_resource type="PackedScene" uid="uid://c4wqwjnf3x8wp" path="res://city_tile_set.tscn" id="4_ejoms"]
+[ext_resource type="PackedScene" uid="uid://bktt32cmlq7ld" path="res://tile_map_for_city.tscn" id="4_r363r"]
 
 [node name="City" instance=ExtResource("1_xss7w")]
 next_level = ExtResource("2_yxx7a")
 
-[node name="CityTileSet" parent="." index="0" instance=ExtResource("4_ejoms")]
-tile_map_data = PackedByteArray(0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-collision_visibility_mode = 1
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="2"]
 position = Vector2(-160, -40)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
@@ -23,23 +19,26 @@ polygon = PackedVector2Array(0, 0, 24, 0, 24, 120, 48, 120, 80, 144, 112, 144, 1
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D" index="0"]
 color = Color(1, 0.42657, 0.994086, 1)
 
-[node name="scroll" parent="." index="4" instance=ExtResource("2_q5way")]
+[node name="scroll" parent="." index="3" instance=ExtResource("2_q5way")]
 position = Vector2(-198, -47)
 
-[node name="scroll2" parent="." index="5" instance=ExtResource("2_q5way")]
+[node name="scroll2" parent="." index="4" instance=ExtResource("2_q5way")]
 position = Vector2(-153, -17)
 
-[node name="scroll3" parent="." index="6" instance=ExtResource("2_q5way")]
+[node name="scroll3" parent="." index="5" instance=ExtResource("2_q5way")]
 position = Vector2(-107, -3)
 
-[node name="scroll4" parent="." index="7" instance=ExtResource("2_q5way")]
+[node name="scroll4" parent="." index="6" instance=ExtResource("2_q5way")]
 position = Vector2(-49, -47)
 
-[node name="scroll5" parent="." index="8" instance=ExtResource("2_q5way")]
+[node name="scroll5" parent="." index="7" instance=ExtResource("2_q5way")]
 position = Vector2(73, -35)
 
-[node name="scroll6" parent="." index="9" instance=ExtResource("2_q5way")]
+[node name="scroll6" parent="." index="8" instance=ExtResource("2_q5way")]
 position = Vector2(109, -42)
 
-[node name="scroll7" parent="." index="10" instance=ExtResource("2_q5way")]
+[node name="scroll7" parent="." index="9" instance=ExtResource("2_q5way")]
 position = Vector2(166, -72)
+
+[node name="TileMapForCity" parent="." index="10" instance=ExtResource("4_r363r")]
+layer_0/tile_data = PackedInt32Array(0, 655360, 9)
