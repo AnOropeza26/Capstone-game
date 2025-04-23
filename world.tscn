@@ -19,7 +19,7 @@ next_level = ExtResource("2_kq8jf")
 position = Vector2(-160, -40)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(-85, 49)
+position = Vector2(-95, 50)
 scale = Vector2(1.76172, 1.69956)
 polygon = PackedVector2Array(0, 0, 24, 0, 24, 120, 48, 120, 80, 144, 112, 144, 128, 120, 144, 120, 144, 152, 177.667, 151.804, 177.667, 128.268, 192, 128, 192, 128, 232, 128, 248, 104, 265.082, 104.145, 263.947, 128.268, 296, 128, 296, 0, 320, 0, 320, 184, 0, 184)
 
@@ -42,14 +42,14 @@ position = Vector2(-25, -14)
 shape = SubResource("RectangleShape2D_dabxj")
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D2/CollisionShape2D"]
-offset_left = -18.0
+offset_left = -17.0
 offset_top = -61.0
-offset_right = 20.0
+offset_right = 21.0
 offset_bottom = 62.0
 color = Color(0.468128, 0.468128, 0.468128, 1)
 
 [node name="Heart" parent="." instance=ExtResource("3_85t86")]
-position = Vector2(253, 61)
+position = Vector2(296, -8)
 scale = Vector2(1, 0.944692)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -62,10 +62,10 @@ offset_right = 61.0
 offset_bottom = 20.0
 
 [node name="RealSpikes" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(24, 267)
+position = Vector2(13, 268)
 
-[node name="RealSpikes2" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(53, 267)
+[node name="RealSpikes" parent="RealSpikes" instance=ExtResource("3_msaqw")]
+position = Vector2(24, 267)
 
 [node name="scroll" parent="." instance=ExtResource("6_egm3i")]
 position = Vector2(-92, 234)
@@ -74,7 +74,18 @@ position = Vector2(-92, 234)
 position = Vector2(108, 205)
 
 [node name="RealSpikes4" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(263, 227)
+position = Vector2(253, 228)
 
 [node name="RealSpikes5" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(235, 227)
+position = Vector2(225, 228)
+
+[node name="RealSpikes2" parent="." instance=ExtResource("3_msaqw")]
+position = Vector2(40, 268)
+
+[node name="RealSpikes3" parent="." instance=ExtResource("3_msaqw")]
+position = Vector2(266, 135)
+rotation = -1.60895
+
+[node name="RealSpikes6" parent="." instance=ExtResource("3_msaqw")]
+position = Vector2(211, 57)
+rotation = 1.59048

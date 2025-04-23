@@ -7,7 +7,8 @@ var dialogue_items: Array[String] = [
 	"Where am I?",  
 	"Who put me here!?",
 	"This place smells disgusting!!!", 
-	"I GOT to find a way out of HERE!",
+	"I GOT to find a way out of HERE!", 
+	"Before the bomb goes....BOOM!"
 ] 
 
 var current_item_index := 0 
