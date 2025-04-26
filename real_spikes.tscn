@@ -5,6 +5,7 @@
 
 [node name="RealSpikes" type="Node2D"]
 position = Vector2(14, 0)
+scale = Vector2(0.6, 0.6)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, 4.76837e-07)

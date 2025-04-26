@@ -9,8 +9,6 @@ extends Node
 
 
 func _ready(): 
-	polygon_2d.polygon = collision_polygon_2d.polygon 
-	polygon_2d.polygon = collision_polygon_2d.polygon
 	Events.level_completed.connect(show_level_completed)
 
 func show_level_completed():

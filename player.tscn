@@ -504,6 +504,7 @@ size = Vector2(20, 28)
 size = Vector2(14.5, 20)
 
 [node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.8, 0.8)
 collision_layer = 2
 floor_constant_speed = true
 floor_max_angle = 1.22173

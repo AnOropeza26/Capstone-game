@@ -1,35 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8ocikp13ut6h"]
+[gd_scene load_steps=9 format=3 uid="uid://b8ocikp13ut6h"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_jkch7"]
 [ext_resource type="PackedScene" uid="uid://dbkt3d6iiahhp" path="res://dialouge2.tscn" id="2_kq8jf"]
 [ext_resource type="PackedScene" uid="uid://dohhcpdikvwah" path="res://player.tscn" id="2_mi63y"]
 [ext_resource type="PackedScene" uid="uid://bpkiyr2mr3r5p" path="res:// heart.tscn" id="3_85t86"]
-[ext_resource type="PackedScene" uid="uid://c4wqwjnf3x8wp" path="res://city_tile_set.tscn" id="3_mcevc"]
 [ext_resource type="PackedScene" uid="uid://cuxai3hmfxv47" path="res://real_spikes.tscn" id="3_msaqw"]
 [ext_resource type="PackedScene" path="res://level_completed.tscn" id="5_64qqe"]
-[ext_resource type="PackedScene" path="res://scroll.tscn" id="6_egm3i"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dabxj"]
-size = Vector2(37, 122)
+[ext_resource type="PackedScene" uid="uid://dbhhmjprxmya2" path="res://scroll.tscn" id="6_egm3i"]
+[ext_resource type="PackedScene" uid="uid://bktt32cmlq7ld" path="res://tile_map_for_city.tscn" id="8_ghvxi"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_jkch7")
 next_level = ExtResource("2_kq8jf")
-
-[node name="CityTileSet" parent="." instance=ExtResource("3_mcevc")]
-position = Vector2(-8.30585, 5.23636)
-tile_map_data = PackedByteArray(0, 0, 255, 255, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-160, -40)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(-85, 49)
-scale = Vector2(1.76172, 1.69956)
-polygon = PackedVector2Array(0, 0, 24, 0, 24, 120, 48, 120, 80, 144, 112, 144, 128, 120, 144, 120, 144, 152, 177.667, 151.804, 177.667, 128.268, 192, 128, 192, 128, 232, 128, 248, 104, 265.082, 104.145, 263.947, 128.268, 296, 128, 296, 0, 320, 0, 320, 184, 0, 184)
-
-[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
-color = Color(0.54099, 0.54099, 0.54099, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_mi63y")]
 position = Vector2(-176, 200)
@@ -38,20 +20,6 @@ position = Vector2(-176, 200)
 position = Vector2(0, -32)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(214, 85)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-25, -14)
-shape = SubResource("RectangleShape2D_dabxj")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D2/CollisionShape2D"]
-offset_left = -18.0
-offset_top = -61.0
-offset_right = 20.0
-offset_bottom = 62.0
-color = Color(0.468128, 0.468128, 0.468128, 1)
 
 [node name="Heart" parent="." instance=ExtResource("3_85t86")]
 position = Vector2(253, 61)
@@ -67,10 +35,10 @@ offset_right = 61.0
 offset_bottom = 20.0
 
 [node name="RealSpikes" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(24, 267)
+position = Vector2(25, 272)
 
 [node name="RealSpikes2" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(53, 267)
+position = Vector2(56, 272)
 
 [node name="scroll" parent="." instance=ExtResource("6_egm3i")]
 position = Vector2(-92, 234)
@@ -79,7 +47,16 @@ position = Vector2(-92, 234)
 position = Vector2(108, 205)
 
 [node name="RealSpikes4" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(263, 227)
+position = Vector2(200, 224)
 
 [node name="RealSpikes5" parent="." instance=ExtResource("3_msaqw")]
-position = Vector2(235, 227)
+position = Vector2(216, 224)
+
+[node name="TileMapForCity" parent="." instance=ExtResource("8_ghvxi")]
+layer_0/tile_data = PackedInt32Array(917491, 327680, 6, 917492, 327680, 6, 917493, 327680, 6, 917494, 327680, 6, 917490, 327680, 6, 851954, 327680, 6, 786418, 327680, 6, 720882, 327680, 6, 655346, 327680, 6, 589810, 327680, 6, 524274, 327680, 6, 458738, 327680, 6, 393202, 327680, 6, 327666, 327680, 6, 262130, 327680, 6, 196594, 327680, 6, 917495, 327680, 6, 983031, 327680, 6, 1048567, 327680, 6, 1114103, 327680, 6, 1114104, 327680, 6, 1114105, 327680, 6, 1114106, 327680, 6, 1114107, 327680, 6, 1114108, 327680, 6, 1048572, 327680, 6, 983036, 327680, 6, 917500, 327680, 6, 917501, 327680, 6, 917502, 327680, 6, 917503, 327680, 6, 851968, 327680, 6, 917504, 327680, 6, 983040, 327680, 6, 1048576, 327680, 6, 1114112, 327680, 6, 1114113, 327680, 6, 1114114, 327680, 6, 1114115, 327680, 6, 1114116, 327680, 6, 1048580, 327680, 6, 983044, 327680, 6, 983045, 327680, 6, 983046, 327680, 6, 983047, 327680, 6, 983048, 327680, 6, 983049, 327680, 6, 917513, 327680, 6, 851977, 327680, 6, 851978, 327680, 6, 851979, 327680, 6, 327695, 327680, 6, 393231, 327680, 6, 393232, 327680, 6, 327696, 327680, 6, 458768, 327680, 6, 524304, 327680, 6, 524303, 327680, 6, 458767, 327680, 6, 589839, 327680, 6, 589840, 327680, 6, 655376, 327680, 6, 655375, 327680, 6, 720911, 327680, 6, 720912, 327680, 6, 786447, 327680, 6, 851983, 327680, 6, 786448, 327680, 6, 851984, 327680, 6, 327691, 327680, 6, 393227, 327680, 6, 458763, 327680, 6, 524299, 327680, 6, 589835, 327680, 6, 589834, 327680, 6, 524298, 327680, 6, 458762, 327680, 6, 393226, 327680, 6, 327690, 327680, 6, 917514, 327680, 6, 917515, 327680, 6, 917516, 327680, 6, 917517, 327680, 6, 917518, 327680, 6, 917519, 327680, 6, 917520, 327680, 6)
+
+[node name="RealSpikes3" parent="." instance=ExtResource("3_msaqw")]
+position = Vector2(40, 272)
+
+[node name="RealSpikes6" parent="." instance=ExtResource("3_msaqw")]
+position = Vector2(232, 224)
