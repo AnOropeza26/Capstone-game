@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsc1f6g68t4ju"
-path="res://.godot/imported/SuperNerd.png-91af9cef5dc2fef769ca12ff3208d1c1.ctex"
+uid="uid://balxkonhlygp6"
+path="res://.godot/imported/new_city_tileset.png-1603d083cca417d5fb7893520b89f5c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SuperNerd.png"
-dest_files=["res://.godot/imported/SuperNerd.png-91af9cef5dc2fef769ca12ff3208d1c1.ctex"]
+source_file="res://new_city_tileset.png"
+dest_files=["res://.godot/imported/new_city_tileset.png-1603d083cca417d5fb7893520b89f5c9.ctex"]
 
 [params]
 
