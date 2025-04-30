@@ -1,10 +1,11 @@
-[gd_scene load_steps=52 format=3 uid="uid://dohhcpdikvwah"]
+[gd_scene load_steps=53 format=3 uid="uid://dohhcpdikvwah"]
 
 [ext_resource type="Resource" uid="uid://bj7jqgumi54rc" path="res://DefaultMovementData.tres" id="1_jkio6"]
 [ext_resource type="Texture2D" uid="uid://bgmtvtyg1wqu1" path="res://Movement-Sheet.png" id="1_okksx"]
 [ext_resource type="Texture2D" uid="uid://bysv5nm4l4esx" path="res://icon.svg" id="2_hgk5g"]
 [ext_resource type="Texture2D" uid="uid://b21dhx1cdblfu" path="res://PlayerIdle-Sheet-export.png" id="3_mm24y"]
 [ext_resource type="PackedScene" uid="uid://v5q8w864tuk" path="res://bombtimer.tscn" id="5_tpnx8"]
+[ext_resource type="PackedScene" uid="uid://b8skmtyrtmc4d" path="res://timer.tscn" id="6_k1tdq"]
 
 [sub_resource type="GDScript" id="GDScript_bm4dc"]
 script/source = "extends CharacterBody2D
@@ -22,6 +23,7 @@ var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 @onready var coyote_jump_timer: Timer = $CoyoteJumpTimer
 @onready var starting_position = global_position
 @onready var death_timer: Timer = $DeathTimer
+
 
 func _ready():
 	death_timer.connect(\"timeout\", Callable(self, \"_on_DeathTimer_timeout\"))
@@ -173,6 +175,10 @@ func _on_timer_timeout() -> void:
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	get_tree().change_scene_to_file(\"res://Game_Over.tscn\")
+
+
+func _on_timer_node_timeout() -> void:
+	pass # Replace with function body.
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k5an6"]
@@ -520,7 +526,8 @@ position_smoothing_enabled = true
 position = Vector2(0, -20)
 scale = Vector2(0.1, 0.099)
 sprite_frames = SubResource("SpriteFrames_lhb2p")
-animation = &"explode"
+animation = &"run"
+frame_progress = 0.141997
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -15)
@@ -545,9 +552,7 @@ debug_color = Color(0, 0.623833, 0.186367, 0.42)
 
 [node name="Bombtimer" parent="CanvasLayer" instance=ExtResource("5_tpnx8")]
 
-[node name="Timer" type="Timer" parent="CanvasLayer/Bombtimer"]
-wait_time = 10.0
-one_shot = true
+[node name="Timer" parent="CanvasLayer/Bombtimer" instance=ExtResource("6_k1tdq")]
 
 [node name="Label" type="Label" parent="CanvasLayer/Bombtimer"]
 modulate = Color(1, 0, 0, 1)

@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://btwh3ecvtd6pl"]
+
+[ext_resource type="Script" path="res://timer_reset.gd" id="1_7osk0"]
+[ext_resource type="Texture2D" uid="uid://bysv5nm4l4esx" path="res://icon.svg" id="2_v6624"]
+[ext_resource type="PackedScene" uid="uid://b8skmtyrtmc4d" path="res://timer.tscn" id="2_xhiow"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cpcoh"]
+radius = 13.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7e5p"]
+atlas = ExtResource("2_v6624")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xdi7q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7e5p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="TimerReset" type="Area2D" groups=["Hearts"]]
+scale = Vector2(0.7, 0.7)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_7osk0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cpcoh")
+
+[node name="Timer" parent="CollisionShape2D" instance=ExtResource("2_xhiow")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9.53674e-07)
+scale = Vector2(0.07, 0.064)
+sprite_frames = SubResource("SpriteFrames_xdi7q")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

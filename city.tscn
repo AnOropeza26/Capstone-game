@@ -1,11 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cikrqsi3oyxv6"]
+[gd_scene load_steps=5 format=3 uid="uid://cikrqsi3oyxv6"]
 
 [ext_resource type="PackedScene" uid="uid://cpn74fv20jbhv" path="res://worldcopy.tscn" id="1_xss7w"]
 [ext_resource type="PackedScene" uid="uid://cgk5o0g2a60g2" path="res://start_menu.tscn" id="2_yxx7a"]
-[ext_resource type="PackedScene" uid="uid://c6amsujqpcp7x" path="res://tile_map_for_city.tscn" id="4_r363r"]
+[ext_resource type="PackedScene" uid="uid://crvm2aonuqk75" path="res://tilemap_but_better.tscn" id="3_j8v4o"]
+[ext_resource type="PackedScene" uid="uid://btwh3ecvtd6pl" path="res://timer_reset.tscn" id="4_swqqc"]
 
 [node name="City" instance=ExtResource("1_xss7w")]
 next_level = ExtResource("2_yxx7a")
 
-[node name="TileMapForCity" parent="." index="2" instance=ExtResource("4_r363r")]
-layer_0/tile_data = PackedInt32Array(131066, 458752, 0, 131067, 458752, 0, 131068, 458752, 0, 131069, 458752, 0, 131070, 458752, 0, 131071, 458752, 0, 65536, 458752, 0, 65537, 458752, 0, 65538, 458752, 0, 65539, 458752, 0, 65540, 458752, 0, 65541, 458752, 0, 65542, 458752, 0, 65543, 458752, 0, 65544, 458752, 0, 65545, 458752, 0, 131065, 458752, 0)
+[node name="TilemapButBetter" parent="." index="0" instance=ExtResource("3_j8v4o")]
+layer_0/tile_data = PackedInt32Array(65527, 458752, 0, 65528, 458752, 0, 65529, 458752, 0, 65530, 458752, 0, 65531, 458752, 0, 65532, 458752, 0, 65533, 458752, 0, 65534, 458752, 0, 65535, 458752, 0, 0, 458752, 0, 1, 458752, 0, 2, 458752, 0, 3, 458752, 0, 4, 458752, 0)
+
+[node name="TimerReset" parent="." index="3" instance=ExtResource("4_swqqc")]
+position = Vector2(-99, -20)
