@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://b8skmtyrtmc4d"]
+=======
+[gd_scene format=3 uid="uid://coekbvu82i1vl"]
+>>>>>>> Stashed changes
 
 [node name="Timer" type="Timer"]
 wait_time = 10.0
