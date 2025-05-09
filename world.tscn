@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8ocikp13ut6h"]
+[gd_scene load_steps=10 format=3 uid="uid://b8ocikp13ut6h"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_jkch7"]
 [ext_resource type="PackedScene" uid="uid://dbkt3d6iiahhp" path="res://dialouge2.tscn" id="2_kq8jf"]
 [ext_resource type="PackedScene" uid="uid://dohhcpdikvwah" path="res://player.tscn" id="2_mi63y"]
 [ext_resource type="PackedScene" uid="uid://bpkiyr2mr3r5p" path="res:// heart.tscn" id="3_85t86"]
 [ext_resource type="PackedScene" uid="uid://cuxai3hmfxv47" path="res://real_spikes.tscn" id="3_msaqw"]
-[ext_resource type="PackedScene" path="res://level_completed.tscn" id="5_64qqe"]
+[ext_resource type="PackedScene" uid="uid://cchjaw72ru86h" path="res://level_completed.tscn" id="5_64qqe"]
 [ext_resource type="PackedScene" uid="uid://dbhhmjprxmya2" path="res://scroll.tscn" id="6_egm3i"]
+[ext_resource type="PackedScene" uid="uid://crvm2aonuqk75" path="res://tilemap_but_better.tscn" id="8_rq3fj"]
+[ext_resource type="PackedScene" uid="uid://dqvn8ox5xtowe" path="res://bottomless_pit.tscn" id="9_bw8kw"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_jkch7")
@@ -21,7 +23,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="Heart" parent="." instance=ExtResource("3_85t86")]
-position = Vector2(253, 61)
+position = Vector2(576, 72)
 scale = Vector2(1, 0.944692)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -43,7 +45,7 @@ position = Vector2(56, 272)
 position = Vector2(-92, 234)
 
 [node name="scroll2" parent="." instance=ExtResource("6_egm3i")]
-position = Vector2(108, 205)
+position = Vector2(108, 191)
 
 [node name="RealSpikes4" parent="." instance=ExtResource("3_msaqw")]
 position = Vector2(200, 224)
@@ -56,3 +58,45 @@ position = Vector2(40, 272)
 
 [node name="RealSpikes6" parent="." instance=ExtResource("3_msaqw")]
 position = Vector2(232, 224)
+
+[node name="TilemapButBetter" parent="." instance=ExtResource("8_rq3fj")]
+layer_0/tile_data = PackedInt32Array(917492, 65536, 0, 917493, 65536, 0, 917494, 65536, 0, 917491, 65536, 0, 1114106, 65536, 0, 1179647, 65536, 0, 1114112, 65536, 0, 1114113, 65536, 0, 1114114, 65536, 0, 1114105, 65536, 0, 1114107, 65536, 0, 917490, 196608, 5, 851954, 196608, 5, 786418, 196608, 5, 720882, 196608, 5, 655346, 196608, 5, 524274, 196608, 5, 589810, 196608, 5, 458738, 196608, 5, 393202, 196608, 5, 393201, 196608, 5, 393200, 196608, 5, 393199, 196608, 5, 393198, 196608, 5, 393197, 196608, 5, 458733, 196608, 5, 524269, 196608, 5, 589806, 65536, 3, 589807, 131072, 3, 655342, 65536, 4, 655343, 131072, 4, 589805, 196608, 5, 655341, 196608, 5, 720877, 196608, 5, 786413, 196608, 5, 851949, 196608, 5, 917485, 196608, 5, 917486, 196608, 5, 917487, 196608, 5, 917488, 0, 3, 917489, 196608, 5, 786414, 196608, 5, 720878, 196608, 5, 720879, 196608, 5, 786415, 196608, 5, 851951, 196608, 5, 851950, 196608, 5, 851953, 196608, 5, 786417, 196608, 5, 720881, 196608, 5, 720880, 196608, 5, 655344, 196608, 4, 655345, 196608, 5, 589809, 196608, 5, 589808, 196608, 3, 524272, 196608, 2, 524271, 131072, 2, 524270, 65536, 2, 458734, 196608, 5, 458735, 196608, 5, 458736, 196608, 5, 458737, 196608, 5, 524273, 196608, 5, 851952, 0, 2, 786416, 196608, 5, 1114115, 65536, 0, 983027, 393216, 1, 983028, 393216, 1, 983029, 393216, 1, 983030, 393216, 1, 983026, 393216, 1, 983025, 393216, 1, 983023, 393216, 1, 983024, 393216, 1, 983022, 393216, 1, 983021, 393216, 1, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 917516, 65536, 0, 917517, 65536, 0, 917518, 65536, 0, 720912, 65536, 0, 524301, 65536, 0, 458769, 65536, 0, 917508, 327680, 0, 851972, 327680, 0, 786436, 327680, 0, 720900, 327680, 0, 589828, 327680, 0, 655364, 327680, 0, 524292, 327680, 0, 458756, 65536, 0, 720896, 327680, 0, 655360, 327680, 0, 589824, 327680, 0, 524288, 327680, 0, 458752, 327680, 0, 393216, 65536, 0, 458751, 65536, 0, 458757, 65536, 0, 458770, 65536, 0, 458771, 65536, 0, 458772, 65536, 0, 458784, 0, 0, 458785, 0, 0, 458786, 0, 0, 458787, 0, 0, 458788, 0, 0, 458789, 0, 0, 458790, 0, 0, 458791, 0, 0, 393255, 0, 3, 327719, 0, 2, 262183, 196608, 5, 196647, 196608, 5, 131111, 196608, 5, 65575, 196608, 5, 39, 196608, 5, 720907, 65536, 0, 458792, 0, 0, 458793, 0, 0, 458794, 0, 0, 458795, 0, 0, 393259, 196608, 5, 327723, 196608, 5, 262186, 196608, 5, 196650, 196608, 5, 131114, 196608, 5, 131115, 196608, 5, 65579, 196608, 5, 43, 196608, 5, 42, 196608, 5, 41, 196608, 5, 40, 196608, 5, 196651, 196608, 5, 262187, 196608, 5, 327722, 196608, 5, 393258, 196608, 5, 393257, 196608, 5, 393256, 196608, 5, 327720, 196608, 5, 327721, 196608, 5, 131112, 131072, 3, 196648, 131072, 4, 131113, 196608, 3, 196649, 196608, 4, 262184, 196608, 5, 262185, 196608, 5, 65576, 196608, 5, 65577, 196608, 5, 65578, 196608, 5)
+
+[node name="BottomlessPit" parent="." instance=ExtResource("9_bw8kw")]
+position = Vector2(-199, 264)
+
+[node name="BottomlessPit2" parent="." instance=ExtResource("9_bw8kw")]
+position = Vector2(-79, 296)
+
+[node name="BottomlessPit3" parent="." instance=ExtResource("9_bw8kw")]
+position = Vector2(90, 304)
+
+[node name="BottomlessPit4" parent="." instance=ExtResource("9_bw8kw")]
+position = Vector2(185, 304)
+
+[node name="BottomlessPit5" parent="." instance=ExtResource("9_bw8kw")]
+position = Vector2(279, 304)
+
+[node name="BottomlessPit6" parent="." instance=ExtResource("9_bw8kw")]
+position = Vector2(373, 304)
+
+[node name="Heart2" parent="." instance=ExtResource("3_85t86")]
+position = Vector2(-261, 59)
+
+[node name="BottomlessPit7" parent="." instance=ExtResource("9_bw8kw")]
+position = Vector2(-384, 263)
+
+[node name="BottomlessPit8" parent="." instance=ExtResource("9_bw8kw")]
+position = Vector2(-467, 263)
+
+[node name="scroll3" parent="." instance=ExtResource("6_egm3i")]
+position = Vector2(296, 84)
+
+[node name="BottomlessPit9" parent="." instance=ExtResource("9_bw8kw")]
+position = Vector2(470, 304)
+
+[node name="BottomlessPit10" parent="." instance=ExtResource("9_bw8kw")]
+position = Vector2(564, 304)
+
+[node name="scroll4" parent="." instance=ExtResource("6_egm3i")]
+position = Vector2(261, 152)
