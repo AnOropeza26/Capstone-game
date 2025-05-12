@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgk5o0g2a60g2"]
+[gd_scene load_steps=5 format=3 uid="uid://cgk5o0g2a60g2"]
 
 [ext_resource type="Script" path="res://start_menu.gd" id="1_0hj1e"]
 [ext_resource type="Texture2D" uid="uid://bqjrcih0kijor" path="res://1000014176.png" id="2_hqg4v"]
+[ext_resource type="AudioStream" uid="uid://b66wwoca5nhd8" path="res://jalenrekt - movin (OG version).mp3" id="2_v8ln6"]
 [ext_resource type="Texture2D" uid="uid://gi30s4kjjtkg" path="res://Free-City-Backgrounds-Pixel-Art2.png" id="2_ylmb4"]
 
 [node name="StartMenu" type="CenterContainer"]
@@ -11,6 +12,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0hj1e")
+
+[node name="Jalenrekt-Movin(ogVersion)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_v8ln6")
+autoplay = true
 
 [node name="Free-city-backgrounds-pixel-art2" type="Sprite2D" parent="."]
 position = Vector2(224.125, 139.75)

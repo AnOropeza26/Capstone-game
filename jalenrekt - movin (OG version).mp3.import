@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b66wwoca5nhd8"
+path="res://.godot/imported/jalenrekt - movin (OG version).mp3-663248433f3b91a719057510a2124c02.mp3str"
+
+[deps]
+
+source_file="res://jalenrekt - movin (OG version).mp3"
+dest_files=["res://.godot/imported/jalenrekt - movin (OG version).mp3-663248433f3b91a719057510a2124c02.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
