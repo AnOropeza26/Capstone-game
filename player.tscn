@@ -1,10 +1,13 @@
-[gd_scene load_steps=39 format=3 uid="uid://dohhcpdikvwah"]
+[gd_scene load_steps=42 format=3 uid="uid://dohhcpdikvwah"]
 
 [ext_resource type="Resource" uid="uid://bj7jqgumi54rc" path="res://DefaultMovementData.tres" id="1_jkio6"]
 [ext_resource type="Texture2D" uid="uid://bgmtvtyg1wqu1" path="res://Movement-Sheet.png" id="1_okksx"]
+[ext_resource type="AudioStream" uid="uid://by8kptb4mhqhf" path="res://Jump sound.mp3" id="2_5r7ct"]
 [ext_resource type="Texture2D" uid="uid://bysv5nm4l4esx" path="res://icon.svg" id="2_hgk5g"]
+[ext_resource type="AudioStream" uid="uid://ccuy3jpol0neu" path="res://beepbeepbeep-53921.mp3" id="3_2oxc4"]
 [ext_resource type="Texture2D" uid="uid://dtxb1xpo5a4tk" path="res://1000014177.png" id="3_65wal"]
 [ext_resource type="Texture2D" uid="uid://b21dhx1cdblfu" path="res://PlayerIdle-Sheet-export.png" id="3_mm24y"]
+[ext_resource type="AudioStream" uid="uid://cb8y5rkj188r1" path="res://Bomb explosion.mp3" id="4_yd1ap"]
 [ext_resource type="PackedScene" uid="uid://v5q8w864tuk" path="res://bombtimer.tscn" id="5_tpnx8"]
 
 [sub_resource type="GDScript" id="GDScript_bm4dc"]
@@ -79,7 +82,8 @@ func handle_jump():
 		if Input.is_action_just_pressed(\"jump\") and air_jump:
 			velocity.y = movement_data.jump_velocity * 0.8
 			air_jump = false
-
+		if Input.is_action_pressed(\"jump\"):
+			$JumpSound.play()
 
 func handle_acceleration(input_axis, delta): 
 	if not is_on_floor(): return
@@ -132,7 +136,7 @@ func die_from_bomb():
 		return
 	is_dying = true
 	animated_sprite_2d.play(\"explode\")
-	
+	$BombExplosion.play()
 	
 	
 
@@ -414,6 +418,19 @@ floor_max_angle = 1.22173
 floor_snap_length = 5.0
 script = SubResource("GDScript_bm4dc")
 movement_data = ExtResource("1_jkio6")
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5r7ct")
+volume_db = -9.286
+
+[node name="Beepbeepbeep-53921" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2oxc4")
+volume_db = -10.31
+autoplay = true
+
+[node name="BombExplosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yd1ap")
+volume_db = 24.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -30)
