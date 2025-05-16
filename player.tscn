@@ -3,11 +3,11 @@
 [ext_resource type="Resource" uid="uid://bj7jqgumi54rc" path="res://DefaultMovementData.tres" id="1_jkio6"]
 [ext_resource type="Texture2D" uid="uid://bgmtvtyg1wqu1" path="res://Movement-Sheet.png" id="1_okksx"]
 [ext_resource type="AudioStream" uid="uid://by8kptb4mhqhf" path="res://Jump sound.mp3" id="2_5r7ct"]
-[ext_resource type="Texture2D" uid="uid://bysv5nm4l4esx" path="res://icon.svg" id="2_hgk5g"]
 [ext_resource type="AudioStream" uid="uid://ccuy3jpol0neu" path="res://beepbeepbeep-53921.mp3" id="3_2oxc4"]
 [ext_resource type="Texture2D" uid="uid://dtxb1xpo5a4tk" path="res://1000014177.png" id="3_65wal"]
 [ext_resource type="Texture2D" uid="uid://b21dhx1cdblfu" path="res://PlayerIdle-Sheet-export.png" id="3_mm24y"]
 [ext_resource type="AudioStream" uid="uid://cb8y5rkj188r1" path="res://Bomb explosion.mp3" id="4_yd1ap"]
+[ext_resource type="Texture2D" uid="uid://dqi4wr1t8nmre" path="res://soul.png" id="5_ll28m"]
 [ext_resource type="PackedScene" uid="uid://v5q8w864tuk" path="res://bombtimer.tscn" id="5_tpnx8"]
 
 [sub_resource type="GDScript" id="GDScript_bm4dc"]
@@ -82,8 +82,8 @@ func handle_jump():
 		if Input.is_action_just_pressed(\"jump\") and air_jump:
 			velocity.y = movement_data.jump_velocity * 0.8
 			air_jump = false
-		if Input.is_action_pressed(\"jump\"):
-			$JumpSound.play()
+	if Input.is_action_pressed(\"jump\"):
+		$JumpSound.play()
 
 func handle_acceleration(input_axis, delta): 
 	if not is_on_floor(): return
@@ -180,9 +180,9 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	get_tree().change_scene_to_file(\"res://Game_Over.tscn\")
 "
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k5an6"]
-atlas = ExtResource("2_hgk5g")
-region = Rect2(0, 0, 128, 128)
+[sub_resource type="AtlasTexture" id="AtlasTexture_migta"]
+atlas = ExtResource("5_ll28m")
+region = Rect2(0, 0, 1280, 640)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jg6gs"]
 atlas = ExtResource("3_65wal")
@@ -296,7 +296,7 @@ region = Rect2(6400, 0, 640, 640)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k5an6")
+"texture": SubResource("AtlasTexture_migta")
 }],
 "loop": true,
 "name": &"die",
@@ -440,7 +440,7 @@ position_smoothing_enabled = true
 position = Vector2(0, -20)
 scale = Vector2(0.1, 0.099)
 sprite_frames = SubResource("SpriteFrames_lhb2p")
-animation = &"explode"
+animation = &"die"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -15)
@@ -466,7 +466,7 @@ debug_color = Color(0, 0.623833, 0.186367, 0.42)
 [node name="Bombtimer" parent="CanvasLayer" instance=ExtResource("5_tpnx8")]
 
 [node name="Timer" type="Timer" parent="CanvasLayer/Bombtimer"]
-wait_time = 5.0
+wait_time = 45.0
 one_shot = true
 
 [node name="Label" type="Label" parent="CanvasLayer/Bombtimer"]

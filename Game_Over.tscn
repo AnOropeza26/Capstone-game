@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dupt74i88h44n"]
+[gd_scene load_steps=3 format=3 uid="uid://dupt74i88h44n"]
 
 [ext_resource type="Script" path="res://start_menu.gd" id="1_g6kjd"]
+[ext_resource type="Texture2D" uid="uid://dpdell78j636k" path="res://Screenshot 2025-05-15 at 4.09.29 PM.png" id="2_uw0av"]
 
 [node name="GameOver" type="CenterContainer"]
 anchors_preset = 15
@@ -9,6 +10,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g6kjd")
+
+[node name="Screenshot2025-05-15At4_09_29 pm" type="Sprite2D" parent="."]
+position = Vector2(205, 136.484)
+scale = Vector2(0.278396, 0.21882)
+texture = ExtResource("2_uw0av")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2

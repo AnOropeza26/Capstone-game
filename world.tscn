@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8ocikp13ut6h"]
+[gd_scene load_steps=11 format=3 uid="uid://b8ocikp13ut6h"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_jkch7"]
 [ext_resource type="PackedScene" uid="uid://dbkt3d6iiahhp" path="res://dialouge2.tscn" id="2_kq8jf"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bpkiyr2mr3r5p" path="res:// heart.tscn" id="3_85t86"]
 [ext_resource type="PackedScene" uid="uid://cuxai3hmfxv47" path="res://real_spikes.tscn" id="3_msaqw"]
 [ext_resource type="PackedScene" uid="uid://cchjaw72ru86h" path="res://level_completed.tscn" id="5_64qqe"]
+[ext_resource type="Texture2D" uid="uid://bymy4en0tay3q" path="res://Screenshot 2025-05-15 at 4.40.07 PM.png" id="6_6j2yj"]
 [ext_resource type="PackedScene" uid="uid://dbhhmjprxmya2" path="res://scroll.tscn" id="6_egm3i"]
 [ext_resource type="PackedScene" uid="uid://crvm2aonuqk75" path="res://tilemap_but_better.tscn" id="8_rq3fj"]
 [ext_resource type="PackedScene" uid="uid://dqvn8ox5xtowe" path="res://bottomless_pit.tscn" id="9_bw8kw"]
@@ -13,6 +14,11 @@
 [node name="World" type="Node2D"]
 script = ExtResource("1_jkch7")
 next_level = ExtResource("2_kq8jf")
+
+[node name="Screenshot2025-05-15At4_40_07 pm" type="Sprite2D" parent="."]
+position = Vector2(139.75, 219)
+scale = Vector2(0.762247, 0.544164)
+texture = ExtResource("6_6j2yj")
 
 [node name="Player" parent="." instance=ExtResource("2_mi63y")]
 position = Vector2(-176, 200)
