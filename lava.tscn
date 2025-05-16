@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmr280h3se34i"]
+
+[ext_resource type="Texture2D" uid="uid://dr55kf7rx3uif" path="res://lava-Sheet.png" id="1_ti5el"]
+[ext_resource type="PackedScene" uid="uid://eu21sm7mtr32" path="res://hazard_area.tscn" id="2_7n2yu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0r8cx"]
+atlas = ExtResource("1_ti5el")
+region = Rect2(0, 0, 1203, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0d5gy"]
+atlas = ExtResource("1_ti5el")
+region = Rect2(1203, 0, 1203, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdp2x"]
+atlas = ExtResource("1_ti5el")
+region = Rect2(2406, 0, 1203, 600)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cg1p2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0r8cx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0d5gy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdp2x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="lava" type="Node2D"]
+position = Vector2(14, 0)
+scale = Vector2(0.6, 0.6)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.833333, -11)
+scale = Vector2(0.0290939, 0.0355556)
+sprite_frames = SubResource("SpriteFrames_cg1p2")
+autoplay = "default"
+frame_progress = 0.196569
+
+[node name="HazardArea" parent="." instance=ExtResource("2_7n2yu")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HazardArea"]
+polygon = PackedVector2Array(-14, 0, 13, 0, 11.6667, -18.3333, -13.3333, -18.3333)
