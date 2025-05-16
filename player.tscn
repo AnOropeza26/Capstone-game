@@ -82,8 +82,8 @@ func handle_jump():
 		if Input.is_action_just_pressed(\"jump\") and air_jump:
 			velocity.y = movement_data.jump_velocity * 0.8
 			air_jump = false
-	if Input.is_action_pressed(\"jump\"):
-		$JumpSound.play()
+		if Input.is_action_pressed(\"jump\"):
+			$JumpSound.play()
 
 func handle_acceleration(input_axis, delta): 
 	if not is_on_floor(): return
@@ -159,7 +159,7 @@ func move_player_up():
 	
 	while position.y > up_position.y:
 		position.y -= 4
-		await get_tree().create_timer(0.02).timeout
+		await get_tree().create_timer(0.01).timeout
 
 func on_DeathTimer_timeout():
 	await  smooth_transition()
@@ -180,7 +180,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	get_tree().change_scene_to_file(\"res://Game_Over.tscn\")
 "
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_migta"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bot1p"]
 atlas = ExtResource("5_ll28m")
 region = Rect2(0, 0, 1280, 640)
 
@@ -296,7 +296,7 @@ region = Rect2(6400, 0, 640, 640)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_migta")
+"texture": SubResource("AtlasTexture_bot1p")
 }],
 "loop": true,
 "name": &"die",
