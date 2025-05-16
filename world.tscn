@@ -75,7 +75,7 @@ position = Vector2(-199, 264)
 position = Vector2(-79, 296)
 
 [node name="BottomlessPit3" parent="." instance=ExtResource("9_bw8kw")]
-position = Vector2(90, 304)
+position = Vector2(91, 304)
 
 [node name="BottomlessPit4" parent="." instance=ExtResource("9_bw8kw")]
 position = Vector2(185, 304)
@@ -106,3 +106,6 @@ position = Vector2(564, 304)
 
 [node name="scroll4" parent="." instance=ExtResource("6_egm3i")]
 position = Vector2(261, 152)
+
+[node name="BottomlessPit11" parent="." instance=ExtResource("9_bw8kw")]
+position = Vector2(4, 305)

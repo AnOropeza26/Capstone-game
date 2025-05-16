@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bmr280h3se34i"]
+[gd_scene load_steps=7 format=3 uid="uid://ccjhytxi0xej"]
 
 [ext_resource type="Texture2D" uid="uid://dr55kf7rx3uif" path="res://lava-Sheet.png" id="1_ti5el"]
 [ext_resource type="PackedScene" uid="uid://eu21sm7mtr32" path="res://hazard_area.tscn" id="2_7n2yu"]
