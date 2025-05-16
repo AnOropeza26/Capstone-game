@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvr23cb65s1wc"]
+
+[ext_resource type="Script" path="res://super_nerd_collectible.gd" id="1_cidqb"]
+[ext_resource type="Texture2D" uid="uid://bd1bwdl3gua36" path="res://SuperNerd.png" id="2_1ht2f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xw37n"]
+size = Vector2(152.857, 28.5714)
+
+[node name="SuperNerdCollectible" type="Area2D" groups=["Hearts"]]
+scale = Vector2(0.7, 0.7)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_cidqb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_1ht2f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.28571)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_xw37n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
