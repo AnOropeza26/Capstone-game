@@ -8,7 +8,7 @@ var dialogue_items: Array[String] = [
 	"Erm hello can you hear me?", 
 	"I need YOUR assistance to help me make my SUPER NERDINATOR!!!", 
 	"If you disobey my orders you will perish in the most scentific way possible an EXPLOSION", 
-	"SO gather what I need....or you will be permanentley jelly!!!", 
+	"SO gather what I need....or you will be permanently jelly!!!", 
 	]
 
 var current_item_index := 0 

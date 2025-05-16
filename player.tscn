@@ -43,6 +43,7 @@ func _physics_process(delta):
 	apply_friction(input_axis, delta)
 	apply_air_resistance(input_axis, delta)
 	update_animations(input_axis)
+	end_it_all()
 	var was_on_floor = is_on_floor()
 	move_and_slide() 
 	var just_left_ledge = was_on_floor and not is_on_floor() and velocity.y >= 0
@@ -178,6 +179,11 @@ func _on_timer_timeout() -> void:
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	get_tree().change_scene_to_file(\"res://Game_Over.tscn\")
+
+
+func end_it_all():
+	if Input.is_action_just_pressed(\"u_die\"):
+		die_from_bomb()
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bot1p"]
@@ -421,11 +427,11 @@ movement_data = ExtResource("1_jkio6")
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_5r7ct")
-volume_db = -9.286
+volume_db = -30.0
 
 [node name="Beepbeepbeep-53921" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_2oxc4")
-volume_db = -10.31
+volume_db = -25.0
 autoplay = true
 
 [node name="BombExplosion" type="AudioStreamPlayer" parent="."]

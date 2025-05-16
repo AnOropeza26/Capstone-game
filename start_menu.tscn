@@ -15,6 +15,7 @@ script = ExtResource("1_0hj1e")
 
 [node name="Jalenrekt-Movin(ogVersion)" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_v8ln6")
+volume_db = -25.0
 autoplay = true
 
 [node name="Free-city-backgrounds-pixel-art2" type="Sprite2D" parent="."]
