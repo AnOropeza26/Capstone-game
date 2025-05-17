@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://8gcqy6i7178p"]
+
+[ext_resource type="Texture2D" uid="uid://cxpd5owitsesm" path="res://Spikescollectible.png" id="1_pdotr"]
+[ext_resource type="PackedScene" uid="uid://eu21sm7mtr32" path="res://hazard_area.tscn" id="2_i8282"]
+
+[node name="upsidedownspikes" type="Node2D"]
+position = Vector2(14, 0)
+rotation = 3.14159
+scale = Vector2(0.6, 0.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.14577e-06, 18.3333)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_pdotr")
+
+[node name="HazardArea" parent="." instance=ExtResource("2_i8282")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HazardArea"]
+position = Vector2(1.60275e-06, 18.3333)
+polygon = PackedVector2Array(-14, 0, 13, 0, 4, -19, -5, -19)

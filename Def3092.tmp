@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bj7jqgumi54rc"]
+[gd_resource type="Resource" script_class="PlayerMovementData" load_steps=2 format=3 uid="uid://bj7jqgumi54rc"]
 
 [sub_resource type="GDScript" id="GDScript_q82lp"]
 script/source = "class_name PlayerMovementData
@@ -20,6 +20,6 @@ speed = 170.0
 acceleration = 900.0
 jump_velocity = -295.0
 friction = 4e+08
-gravity_scale = 0.1
+gravity_scale = 0.2
 air_resistance = 150.0
 air_acceleration = 800.0

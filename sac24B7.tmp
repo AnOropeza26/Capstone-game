@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://dghrkvndh4pb5"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_y57il"]
+[ext_resource type="PackedScene" uid="uid://dbkt3d6iiahhp" path="res://dialouge2.tscn" id="2_hecop"]
+[ext_resource type="AudioStream" uid="uid://b66wwoca5nhd8" path="res://jalenrekt - movin (OG version).mp3" id="3_i2cxp"]
+[ext_resource type="PackedScene" path="res://level_completed.tscn" id="4_0f8em"]
+[ext_resource type="PackedScene" uid="uid://d1brb4yj82uxg" path="res://parachute_player.tscn" id="4_o4e6s"]
+[ext_resource type="PackedScene" uid="uid://mtba8d40nobb" path="res://blow_up.tscn" id="5_p6hwj"]
+
+[node name="Sacrafice Ending" type="Node2D"]
+script = ExtResource("1_y57il")
+next_level = ExtResource("2_hecop")
+
+[node name="Jalenrekt-Movin(ogVersion)" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_i2cxp")
+autoplay = true
+
+[node name="ParachutePlayer" parent="." instance=ExtResource("4_o4e6s")]
+position = Vector2(-189.757, 547.415)
+
+[node name="Camera2D2" type="Camera2D" parent="ParachutePlayer"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelCompleted" parent="CanvasLayer" instance=ExtResource("4_0f8em")]
+visible = false
+offset_left = -47.0
+offset_top = -5.0
+offset_right = 61.0
+offset_bottom = 20.0
+
+[node name="Blow up" parent="CanvasLayer" instance=ExtResource("5_p6hwj")]
+position = Vector2(-222, 853)
+scale = Vector2(0.7, 0.7)

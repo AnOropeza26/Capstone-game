@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://n7ujirekpuuq"]
+
+[ext_resource type="Theme" uid="uid://x6pdhugge88m" path="res://main_theme.tres" id="1_kll4a"]
+[ext_resource type="Script" path="res://dialouge_3.gd" id="2_vvxuj"]
+[ext_resource type="Texture2D" uid="uid://bd1bwdl3gua36" path="res://SuperNerd.png" id="2_xxdgv"]
+
+[node name="Dialouge3" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 57.0
+offset_bottom = 55.0
+theme = ExtResource("1_kll4a")
+script = ExtResource("2_vvxuj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 7.846
+anchor_bottom = 4.954
+offset_left = 195.0
+offset_top = 112.0
+offset_right = -24.222
+offset_bottom = -71.47
+theme = ExtResource("1_kll4a")
+text = "  Hello world Im stuck in the sewer so take control of me   and get out! 3:"
+fit_content = true
+
+[node name="NextButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.107
+anchor_top = 0.306
+anchor_right = 7.902
+anchor_bottom = 5.018
+offset_left = 390.901
+offset_top = 226.17
+offset_right = -10.414
+offset_bottom = -5.99002
+grow_horizontal = 0
+grow_vertical = 0
+text = "Next"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(106, 191)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_xxdgv")

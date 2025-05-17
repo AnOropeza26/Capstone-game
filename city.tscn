@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cikrqsi3oyxv6"]
 
 [ext_resource type="PackedScene" uid="uid://cpn74fv20jbhv" path="res://worldcopy.tscn" id="1_xss7w"]
-[ext_resource type="PackedScene" uid="uid://cgk5o0g2a60g2" path="res://start_menu.tscn" id="2_yxx7a"]
+[ext_resource type="PackedScene" uid="uid://dh856r7edim8o" path="res://Hotel.tscn" id="2_a1nfl"]
 [ext_resource type="PackedScene" uid="uid://crvm2aonuqk75" path="res://tilemap_but_better.tscn" id="3_7trxl"]
 [ext_resource type="Texture2D" uid="uid://gi30s4kjjtkg" path="res://Free-City-Backgrounds-Pixel-Art2.png" id="3_351a8"]
 [ext_resource type="PackedScene" uid="uid://dbhhmjprxmya2" path="res://scroll.tscn" id="4_wwgmi"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bpkiyr2mr3r5p" path="res:// heart.tscn" id="6_6dm1a"]
 
 [node name="City" instance=ExtResource("1_xss7w")]
-next_level = ExtResource("2_yxx7a")
+next_level = ExtResource("2_a1nfl")
 
 [node name="Parallax2D" type="Parallax2D" parent="." index="0"]
 

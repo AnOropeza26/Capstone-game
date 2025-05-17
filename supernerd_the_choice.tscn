@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bx3iof63k4tol"]
+
+[ext_resource type="Script" path="res://supernerd_the_choice.gd" id="1_f2jqh"]
+[ext_resource type="Texture2D" uid="uid://bd1bwdl3gua36" path="res://SuperNerd.png" id="2_2bmxt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xw37n"]
+size = Vector2(8.57143, 10.9524)
+
+[node name="SupernerdTheChoice" type="Area2D" groups=["Hearts"]]
+scale = Vector2(0.7, 0.7)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_f2jqh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_2bmxt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.70299e-07, 2.14286)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_xw37n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

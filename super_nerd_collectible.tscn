@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bd1bwdl3gua36" path="res://SuperNerd.png" id="2_1ht2f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xw37n"]
-size = Vector2(152.857, 28.5714)
+size = Vector2(391.429, 31.4286)
 
 [node name="SuperNerdCollectible" type="Area2D" groups=["Hearts"]]
 scale = Vector2(0.7, 0.7)
@@ -17,7 +17,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_1ht2f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 4.28571)
+position = Vector2(-1.08991e-05, 2.85714)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xw37n")
 

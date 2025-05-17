@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://mtba8d40nobb"]
+
+[ext_resource type="PackedScene" uid="uid://eu21sm7mtr32" path="res://hazard_area.tscn" id="1_m5d5w"]
+
+[node name="Blow up" type="Node2D"]
+
+[node name="HazardArea" parent="." instance=ExtResource("1_m5d5w")]
+collision_layer = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HazardArea"]
+position = Vector2(36.8, 0)
+scale = Vector2(1.95833, 1)
+polygon = PackedVector2Array(-24, -3, 24, -3, 24, 1, -24, 1)

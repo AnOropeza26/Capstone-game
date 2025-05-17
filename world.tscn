@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dohhcpdikvwah" path="res://player.tscn" id="2_mi63y"]
 [ext_resource type="PackedScene" uid="uid://bpkiyr2mr3r5p" path="res:// heart.tscn" id="3_85t86"]
 [ext_resource type="PackedScene" uid="uid://cuxai3hmfxv47" path="res://real_spikes.tscn" id="3_msaqw"]
-[ext_resource type="PackedScene" uid="uid://cchjaw72ru86h" path="res://level_completed.tscn" id="5_64qqe"]
+[ext_resource type="PackedScene" path="res://level_completed.tscn" id="5_64qqe"]
 [ext_resource type="Texture2D" uid="uid://bymy4en0tay3q" path="res://Screenshot 2025-05-15 at 4.40.07 PM.png" id="6_6j2yj"]
 [ext_resource type="PackedScene" uid="uid://dbhhmjprxmya2" path="res://scroll.tscn" id="6_egm3i"]
 [ext_resource type="PackedScene" uid="uid://crvm2aonuqk75" path="res://tilemap_but_better.tscn" id="8_rq3fj"]
