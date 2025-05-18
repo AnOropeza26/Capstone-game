@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgnwe2iomrt7i"]
+
+[ext_resource type="Texture2D" uid="uid://bd1bwdl3gua36" path="res://SuperNerd.png" id="1_k7eyp"]
+
+[node name="SuperNerd" type="Sprite2D"]
+position = Vector2(1, 3)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_k7eyp")

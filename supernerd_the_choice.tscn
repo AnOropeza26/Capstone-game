@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bd1bwdl3gua36" path="res://SuperNerd.png" id="2_2bmxt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xw37n"]
-size = Vector2(8.57143, 10.9524)
+size = Vector2(10.4762, 10.9524)
 
 [node name="SupernerdTheChoice" type="Area2D" groups=["Hearts"]]
 scale = Vector2(0.7, 0.7)

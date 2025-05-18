@@ -1,22 +1,20 @@
 extends Control
 
-
 @onready var rich_text_label: RichTextLabel = %RichTextLabel
 @onready var next_button: Button = %NextButton   
 
 var dialogue_items: Array[String] = [ 
-	"Erm- h-how did you f-find me baka!", 
-	"YOU CANT STOP ME!!!", 
-	"If you do....", 
-	"I WONT TURN THE BOMB OFF AND YOU WILL BE PERMANENTLY JELLY!!!", 
-	"My nerdinator...",
-	"It will make everyone in the city like me...",
-	"A WHOLE CITY OF SUPERNERDS",
-	"We will watch anime TOGETHER",
-	"We will hop on LOL TOGETHER",
-	"We will always be TOGETHER",
-	"Ill never be alone again!!!!",
-	]
+	"YES!",  
+	"THE NERDINATOR HAS BEEN ACTIVATED!",
+	"EVERYONE IN THE CITY IS A SUPERNERD!", 
+	"THE NERDTOCRACY HAS BEGUN!", 
+	"....",
+	"Since you assisted me in my evil plan.",
+	"I will disable your bomb.",
+	"Now.",
+	"LETS PARTY"
+	
+] 
 
 var current_item_index := 0 
 
@@ -32,7 +30,7 @@ func advance() -> void:
 	current_item_index += 1 
 	
 	if current_item_index == dialogue_items.size(): 
-		get_tree().change_scene_to_file("res://the_choice.tscn")
+		get_tree().change_scene_to_file("res://nerdinator_ending.tscn")
 		
 
 
