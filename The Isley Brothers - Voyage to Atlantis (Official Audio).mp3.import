@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmts8m53fwax4"
+path="res://.godot/imported/The Isley Brothers - Voyage to Atlantis (Official Audio).mp3-1b0c35b7d04430d097a1e5ca4bc26926.mp3str"
+
+[deps]
+
+source_file="res://The Isley Brothers - Voyage to Atlantis (Official Audio).mp3"
+dest_files=["res://.godot/imported/The Isley Brothers - Voyage to Atlantis (Official Audio).mp3-1b0c35b7d04430d097a1e5ca4bc26926.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

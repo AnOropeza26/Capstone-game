@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8w4ljxa3t7vw"
+path="res://.godot/imported/Pharrell Williams  - That Girl - Karaoke Instrumental  Feat Snoop Dogg & Charlie Wilson 2021.mp3-9b1ef625bd6ceda4fbf649eb88b7204c.mp3str"
+
+[deps]
+
+source_file="res://Pharrell Williams  - That Girl - Karaoke Instrumental  Feat Snoop Dogg & Charlie Wilson 2021.mp3"
+dest_files=["res://.godot/imported/Pharrell Williams  - That Girl - Karaoke Instrumental  Feat Snoop Dogg & Charlie Wilson 2021.mp3-9b1ef625bd6ceda4fbf649eb88b7204c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

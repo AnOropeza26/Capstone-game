@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://t38oqveda4md"
+path="res://.godot/imported/Dark Tension Rising Music (Download and Royalty FREE).mp3-c0e3a13fc673e752a91be63996f972b0.mp3str"
+
+[deps]
+
+source_file="res://Dark Tension Rising Music (Download and Royalty FREE).mp3"
+dest_files=["res://.godot/imported/Dark Tension Rising Music (Download and Royalty FREE).mp3-c0e3a13fc673e752a91be63996f972b0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

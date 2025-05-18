@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bohwokw82sf68"
+path="res://.godot/imported/Mario Judah - Die Very Rough [INSTRUMENTAL] (extracted from og song).mp3-e02e41e4a71cb3aae69bc93827c3d21a.mp3str"
+
+[deps]
+
+source_file="res://Mario Judah - Die Very Rough [INSTRUMENTAL] (extracted from og song).mp3"
+dest_files=["res://.godot/imported/Mario Judah - Die Very Rough [INSTRUMENTAL] (extracted from og song).mp3-e02e41e4a71cb3aae69bc93827c3d21a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

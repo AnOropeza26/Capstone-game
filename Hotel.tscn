@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dh856r7edim8o"]
+[gd_scene load_steps=13 format=3 uid="uid://dh856r7edim8o"]
 
 [ext_resource type="PackedScene" uid="uid://cpn74fv20jbhv" path="res://worldcopy.tscn" id="1_f8eol"]
 [ext_resource type="PackedScene" uid="uid://n7ujirekpuuq" path="res://dialouge_3.tscn" id="2_xbns5"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://crvm2aonuqk75" path="res://tilemap_but_better.tscn" id="4_dl40k"]
 [ext_resource type="PackedScene" uid="uid://dbhhmjprxmya2" path="res://scroll.tscn" id="5_ukyqo"]
 [ext_resource type="PackedScene" uid="uid://cuxai3hmfxv47" path="res://real_spikes.tscn" id="6_qmmfa"]
+[ext_resource type="AudioStream" uid="uid://cnd66ag3xks0p" path="res://untitled 05 09.21.2014. - Kendrick Lamar (untitled unmastered).mp3" id="6_ysjxs"]
 [ext_resource type="PackedScene" uid="uid://ccjhytxi0xej" path="res://lava.tscn" id="7_4e3sx"]
 [ext_resource type="PackedScene" uid="uid://bvr23cb65s1wc" path="res://super_nerd_collectible.tscn" id="7_eqhel"]
 [ext_resource type="PackedScene" uid="uid://8gcqy6i7178p" path="res://upsidedownspikes.tscn" id="8_ubefd"]
@@ -35,356 +36,361 @@ position = Vector2(22, -30.0001)
 [node name="scroll4" parent="." index="5" instance=ExtResource("5_ukyqo")]
 position = Vector2(899, -35)
 
-[node name="lava" parent="." index="6" instance=ExtResource("7_4e3sx")]
+[node name="Untitled0509_21_2014_-KendrickLamar(untitledUnmastered)" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("6_ysjxs")
+volume_db = -15.0
+autoplay = true
+
+[node name="lava" parent="." index="7" instance=ExtResource("7_4e3sx")]
 position = Vector2(249, -192)
 
-[node name="lava2" parent="." index="7" instance=ExtResource("7_4e3sx")]
+[node name="lava2" parent="." index="8" instance=ExtResource("7_4e3sx")]
 position = Vector2(265, -192)
 
-[node name="lava3" parent="." index="8" instance=ExtResource("7_4e3sx")]
+[node name="lava3" parent="." index="9" instance=ExtResource("7_4e3sx")]
 position = Vector2(281, -192)
 
-[node name="lava4" parent="." index="9" instance=ExtResource("7_4e3sx")]
+[node name="lava4" parent="." index="10" instance=ExtResource("7_4e3sx")]
 position = Vector2(296, -192)
 
-[node name="lava5" parent="." index="10" instance=ExtResource("7_4e3sx")]
+[node name="lava5" parent="." index="11" instance=ExtResource("7_4e3sx")]
 position = Vector2(312, -192)
 
-[node name="lava6" parent="." index="11" instance=ExtResource("7_4e3sx")]
+[node name="lava6" parent="." index="12" instance=ExtResource("7_4e3sx")]
 position = Vector2(328, -192)
 
-[node name="lava7" parent="." index="12" instance=ExtResource("7_4e3sx")]
+[node name="lava7" parent="." index="13" instance=ExtResource("7_4e3sx")]
 position = Vector2(344, -192)
 
-[node name="lava8" parent="." index="13" instance=ExtResource("7_4e3sx")]
+[node name="lava8" parent="." index="14" instance=ExtResource("7_4e3sx")]
 position = Vector2(360, -192)
 
-[node name="lava9" parent="." index="14" instance=ExtResource("7_4e3sx")]
+[node name="lava9" parent="." index="15" instance=ExtResource("7_4e3sx")]
 position = Vector2(376, -192)
 
-[node name="lava10" parent="." index="15" instance=ExtResource("7_4e3sx")]
+[node name="lava10" parent="." index="16" instance=ExtResource("7_4e3sx")]
 position = Vector2(392, -192)
 
-[node name="lava11" parent="." index="16" instance=ExtResource("7_4e3sx")]
+[node name="lava11" parent="." index="17" instance=ExtResource("7_4e3sx")]
 position = Vector2(408, -192)
 
-[node name="lava12" parent="." index="17" instance=ExtResource("7_4e3sx")]
+[node name="lava12" parent="." index="18" instance=ExtResource("7_4e3sx")]
 position = Vector2(424, -192)
 
-[node name="lava13" parent="." index="18" instance=ExtResource("7_4e3sx")]
+[node name="lava13" parent="." index="19" instance=ExtResource("7_4e3sx")]
 position = Vector2(440, -192)
 
-[node name="lava14" parent="." index="19" instance=ExtResource("7_4e3sx")]
+[node name="lava14" parent="." index="20" instance=ExtResource("7_4e3sx")]
 position = Vector2(456, -192)
 
-[node name="lava15" parent="." index="20" instance=ExtResource("7_4e3sx")]
+[node name="lava15" parent="." index="21" instance=ExtResource("7_4e3sx")]
 position = Vector2(472, -192)
 
-[node name="lava16" parent="." index="21" instance=ExtResource("7_4e3sx")]
+[node name="lava16" parent="." index="22" instance=ExtResource("7_4e3sx")]
 position = Vector2(488, -192)
 
-[node name="lava17" parent="." index="22" instance=ExtResource("7_4e3sx")]
+[node name="lava17" parent="." index="23" instance=ExtResource("7_4e3sx")]
 position = Vector2(504, -192)
 
-[node name="lava18" parent="." index="23" instance=ExtResource("7_4e3sx")]
+[node name="lava18" parent="." index="24" instance=ExtResource("7_4e3sx")]
 position = Vector2(520, -192)
 
-[node name="lava19" parent="." index="24" instance=ExtResource("7_4e3sx")]
+[node name="lava19" parent="." index="25" instance=ExtResource("7_4e3sx")]
 position = Vector2(536, -192)
 
-[node name="lava20" parent="." index="25" instance=ExtResource("7_4e3sx")]
+[node name="lava20" parent="." index="26" instance=ExtResource("7_4e3sx")]
 position = Vector2(552, -192)
 
-[node name="lava21" parent="." index="26" instance=ExtResource("7_4e3sx")]
+[node name="lava21" parent="." index="27" instance=ExtResource("7_4e3sx")]
 position = Vector2(568, -192)
 
-[node name="lava22" parent="." index="27" instance=ExtResource("7_4e3sx")]
+[node name="lava22" parent="." index="28" instance=ExtResource("7_4e3sx")]
 position = Vector2(584, -192)
 
-[node name="lava23" parent="." index="28" instance=ExtResource("7_4e3sx")]
+[node name="lava23" parent="." index="29" instance=ExtResource("7_4e3sx")]
 position = Vector2(600, -192)
 
-[node name="lava24" parent="." index="29" instance=ExtResource("7_4e3sx")]
+[node name="lava24" parent="." index="30" instance=ExtResource("7_4e3sx")]
 position = Vector2(616, -192)
 
-[node name="lava25" parent="." index="30" instance=ExtResource("7_4e3sx")]
+[node name="lava25" parent="." index="31" instance=ExtResource("7_4e3sx")]
 position = Vector2(632, -192)
 
-[node name="lava26" parent="." index="31" instance=ExtResource("7_4e3sx")]
+[node name="lava26" parent="." index="32" instance=ExtResource("7_4e3sx")]
 position = Vector2(648, -192)
 
-[node name="lava27" parent="." index="32" instance=ExtResource("7_4e3sx")]
+[node name="lava27" parent="." index="33" instance=ExtResource("7_4e3sx")]
 position = Vector2(664, -192)
 
-[node name="lava28" parent="." index="33" instance=ExtResource("7_4e3sx")]
+[node name="lava28" parent="." index="34" instance=ExtResource("7_4e3sx")]
 position = Vector2(679, -192)
 
-[node name="lava29" parent="." index="34" instance=ExtResource("7_4e3sx")]
+[node name="lava29" parent="." index="35" instance=ExtResource("7_4e3sx")]
 position = Vector2(695, -192)
 
-[node name="lava30" parent="." index="35" instance=ExtResource("7_4e3sx")]
+[node name="lava30" parent="." index="36" instance=ExtResource("7_4e3sx")]
 position = Vector2(711, -192)
 
-[node name="lava31" parent="." index="36" instance=ExtResource("7_4e3sx")]
+[node name="lava31" parent="." index="37" instance=ExtResource("7_4e3sx")]
 position = Vector2(727, -192)
 
-[node name="lava32" parent="." index="37" instance=ExtResource("7_4e3sx")]
+[node name="lava32" parent="." index="38" instance=ExtResource("7_4e3sx")]
 position = Vector2(743, -192)
 
-[node name="lava33" parent="." index="38" instance=ExtResource("7_4e3sx")]
+[node name="lava33" parent="." index="39" instance=ExtResource("7_4e3sx")]
 position = Vector2(759, -192)
 
-[node name="lava34" parent="." index="39" instance=ExtResource("7_4e3sx")]
+[node name="lava34" parent="." index="40" instance=ExtResource("7_4e3sx")]
 position = Vector2(775, -192)
 
-[node name="lava35" parent="." index="40" instance=ExtResource("7_4e3sx")]
+[node name="lava35" parent="." index="41" instance=ExtResource("7_4e3sx")]
 position = Vector2(791, -192)
 
-[node name="lava36" parent="." index="41" instance=ExtResource("7_4e3sx")]
+[node name="lava36" parent="." index="42" instance=ExtResource("7_4e3sx")]
 position = Vector2(805, -192)
 
-[node name="lava37" parent="." index="42" instance=ExtResource("7_4e3sx")]
+[node name="lava37" parent="." index="43" instance=ExtResource("7_4e3sx")]
 position = Vector2(821, -192)
 
-[node name="lava38" parent="." index="43" instance=ExtResource("7_4e3sx")]
+[node name="lava38" parent="." index="44" instance=ExtResource("7_4e3sx")]
 position = Vector2(837, -192)
 
-[node name="lava39" parent="." index="44" instance=ExtResource("7_4e3sx")]
+[node name="lava39" parent="." index="45" instance=ExtResource("7_4e3sx")]
 position = Vector2(853, -192)
 
-[node name="lava40" parent="." index="45" instance=ExtResource("7_4e3sx")]
+[node name="lava40" parent="." index="46" instance=ExtResource("7_4e3sx")]
 position = Vector2(869, -192)
 
-[node name="lava41" parent="." index="46" instance=ExtResource("7_4e3sx")]
+[node name="lava41" parent="." index="47" instance=ExtResource("7_4e3sx")]
 position = Vector2(885, -192)
 
-[node name="lava42" parent="." index="47" instance=ExtResource("7_4e3sx")]
+[node name="lava42" parent="." index="48" instance=ExtResource("7_4e3sx")]
 position = Vector2(901, -192)
 
-[node name="lava43" parent="." index="48" instance=ExtResource("7_4e3sx")]
+[node name="lava43" parent="." index="49" instance=ExtResource("7_4e3sx")]
 position = Vector2(916, -192)
 
-[node name="lava44" parent="." index="49" instance=ExtResource("7_4e3sx")]
+[node name="lava44" parent="." index="50" instance=ExtResource("7_4e3sx")]
 position = Vector2(932, -192)
 
-[node name="lava45" parent="." index="50" instance=ExtResource("7_4e3sx")]
+[node name="lava45" parent="." index="51" instance=ExtResource("7_4e3sx")]
 position = Vector2(948, -192)
 
-[node name="lava46" parent="." index="51" instance=ExtResource("7_4e3sx")]
+[node name="lava46" parent="." index="52" instance=ExtResource("7_4e3sx")]
 position = Vector2(964, -192)
 
-[node name="lava47" parent="." index="52" instance=ExtResource("7_4e3sx")]
+[node name="lava47" parent="." index="53" instance=ExtResource("7_4e3sx")]
 position = Vector2(968, -192)
 
-[node name="lava48" parent="." index="53" instance=ExtResource("7_4e3sx")]
+[node name="lava48" parent="." index="54" instance=ExtResource("7_4e3sx")]
 position = Vector2(984, -192)
 
-[node name="RealSpikes6" parent="." index="54" instance=ExtResource("6_qmmfa")]
+[node name="RealSpikes6" parent="." index="55" instance=ExtResource("6_qmmfa")]
 position = Vector2(937, -768)
 rotation = 3.14159
 
-[node name="RealSpikes7" parent="." index="55" instance=ExtResource("6_qmmfa")]
+[node name="RealSpikes7" parent="." index="56" instance=ExtResource("6_qmmfa")]
 position = Vector2(920, -768)
 rotation = 3.14159
 
-[node name="RealSpikes8" parent="." index="56" instance=ExtResource("6_qmmfa")]
+[node name="RealSpikes8" parent="." index="57" instance=ExtResource("6_qmmfa")]
 position = Vector2(904, -768)
 rotation = 3.14159
 
-[node name="RealSpikes9" parent="." index="57" instance=ExtResource("6_qmmfa")]
+[node name="RealSpikes9" parent="." index="58" instance=ExtResource("6_qmmfa")]
 position = Vector2(888, -768)
 rotation = 3.14159
 
-[node name="RealSpikes10" parent="." index="58" instance=ExtResource("6_qmmfa")]
+[node name="RealSpikes10" parent="." index="59" instance=ExtResource("6_qmmfa")]
 position = Vector2(872, -768)
 rotation = 3.14159
 
-[node name="RealSpikes11" parent="." index="59" instance=ExtResource("6_qmmfa")]
+[node name="RealSpikes11" parent="." index="60" instance=ExtResource("6_qmmfa")]
 position = Vector2(856, -768)
 rotation = 3.14159
 
-[node name="RealSpikes12" parent="." index="60" instance=ExtResource("6_qmmfa")]
+[node name="RealSpikes12" parent="." index="61" instance=ExtResource("6_qmmfa")]
 position = Vector2(840, -768)
 rotation = 3.14159
 
-[node name="RealSpikes13" parent="." index="61" instance=ExtResource("6_qmmfa")]
+[node name="RealSpikes13" parent="." index="62" instance=ExtResource("6_qmmfa")]
 position = Vector2(824, -768)
 rotation = 3.14159
 
-[node name="lava49" parent="." index="62" instance=ExtResource("7_4e3sx")]
+[node name="lava49" parent="." index="63" instance=ExtResource("7_4e3sx")]
 position = Vector2(1001, -192)
 
-[node name="SuperNerdCollectible" parent="." index="63" instance=ExtResource("7_eqhel")]
+[node name="SuperNerdCollectible" parent="." index="64" instance=ExtResource("7_eqhel")]
 position = Vector2(1033, -814)
 
-[node name="upsidedownspikes" parent="." index="64" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes" parent="." index="65" instance=ExtResource("8_ubefd")]
 position = Vector2(761, -613)
 
-[node name="upsidedownspikes2" parent="." index="65" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes2" parent="." index="66" instance=ExtResource("8_ubefd")]
 position = Vector2(745, -613)
 
-[node name="upsidedownspikes3" parent="." index="66" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes3" parent="." index="67" instance=ExtResource("8_ubefd")]
 position = Vector2(730, -613)
 
-[node name="upsidedownspikes4" parent="." index="67" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes4" parent="." index="68" instance=ExtResource("8_ubefd")]
 position = Vector2(713, -613)
 
-[node name="upsidedownspikes5" parent="." index="68" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes5" parent="." index="69" instance=ExtResource("8_ubefd")]
 position = Vector2(697, -613)
 
-[node name="upsidedownspikes6" parent="." index="69" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes6" parent="." index="70" instance=ExtResource("8_ubefd")]
 position = Vector2(681, -613)
 
-[node name="upsidedownspikes7" parent="." index="70" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes7" parent="." index="71" instance=ExtResource("8_ubefd")]
 position = Vector2(665, -613)
 
-[node name="upsidedownspikes8" parent="." index="71" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes8" parent="." index="72" instance=ExtResource("8_ubefd")]
 position = Vector2(649, -613)
 
-[node name="upsidedownspikes9" parent="." index="72" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes9" parent="." index="73" instance=ExtResource("8_ubefd")]
 position = Vector2(633, -613)
 
-[node name="upsidedownspikes10" parent="." index="73" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes10" parent="." index="74" instance=ExtResource("8_ubefd")]
 position = Vector2(617, -613)
 
-[node name="upsidedownspikes11" parent="." index="74" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes11" parent="." index="75" instance=ExtResource("8_ubefd")]
 position = Vector2(601, -613)
 
-[node name="upsidedownspikes12" parent="." index="75" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes12" parent="." index="76" instance=ExtResource("8_ubefd")]
 position = Vector2(585, -613)
 
-[node name="upsidedownspikes13" parent="." index="76" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes13" parent="." index="77" instance=ExtResource("8_ubefd")]
 position = Vector2(569, -613)
 
-[node name="upsidedownspikes14" parent="." index="77" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes14" parent="." index="78" instance=ExtResource("8_ubefd")]
 position = Vector2(553, -613)
 
-[node name="upsidedownspikes15" parent="." index="78" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes15" parent="." index="79" instance=ExtResource("8_ubefd")]
 position = Vector2(537, -613)
 
-[node name="upsidedownspikes16" parent="." index="79" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes16" parent="." index="80" instance=ExtResource("8_ubefd")]
 position = Vector2(521, -613)
 
-[node name="upsidedownspikes17" parent="." index="80" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes17" parent="." index="81" instance=ExtResource("8_ubefd")]
 position = Vector2(505, -613)
 
-[node name="upsidedownspikes18" parent="." index="81" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes18" parent="." index="82" instance=ExtResource("8_ubefd")]
 position = Vector2(489, -613)
 
-[node name="upsidedownspikes19" parent="." index="82" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes19" parent="." index="83" instance=ExtResource("8_ubefd")]
 position = Vector2(473, -613)
 
-[node name="upsidedownspikes20" parent="." index="83" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes20" parent="." index="84" instance=ExtResource("8_ubefd")]
 position = Vector2(457, -613)
 
-[node name="upsidedownspikes21" parent="." index="84" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes21" parent="." index="85" instance=ExtResource("8_ubefd")]
 position = Vector2(441, -613)
 
-[node name="upsidedownspikes22" parent="." index="85" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes22" parent="." index="86" instance=ExtResource("8_ubefd")]
 position = Vector2(425, -613)
 
-[node name="upsidedownspikes23" parent="." index="86" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes23" parent="." index="87" instance=ExtResource("8_ubefd")]
 position = Vector2(409, -613)
 
-[node name="upsidedownspikes24" parent="." index="87" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes24" parent="." index="88" instance=ExtResource("8_ubefd")]
 position = Vector2(393, -613)
 
-[node name="upsidedownspikes25" parent="." index="88" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes25" parent="." index="89" instance=ExtResource("8_ubefd")]
 position = Vector2(377, -613)
 
-[node name="upsidedownspikes26" parent="." index="89" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes26" parent="." index="90" instance=ExtResource("8_ubefd")]
 position = Vector2(361, -613)
 
-[node name="upsidedownspikes27" parent="." index="90" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes27" parent="." index="91" instance=ExtResource("8_ubefd")]
 position = Vector2(345, -613)
 
-[node name="upsidedownspikes28" parent="." index="91" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes28" parent="." index="92" instance=ExtResource("8_ubefd")]
 position = Vector2(329, -613)
 
-[node name="upsidedownspikes29" parent="." index="92" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes29" parent="." index="93" instance=ExtResource("8_ubefd")]
 position = Vector2(313, -613)
 
-[node name="upsidedownspikes30" parent="." index="93" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes30" parent="." index="94" instance=ExtResource("8_ubefd")]
 position = Vector2(297, -613)
 
-[node name="upsidedownspikes31" parent="." index="94" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes31" parent="." index="95" instance=ExtResource("8_ubefd")]
 position = Vector2(281, -613)
 
-[node name="upsidedownspikes32" parent="." index="95" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes32" parent="." index="96" instance=ExtResource("8_ubefd")]
 position = Vector2(265, -613)
 
-[node name="upsidedownspikes33" parent="." index="96" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes33" parent="." index="97" instance=ExtResource("8_ubefd")]
 position = Vector2(249, -613)
 
-[node name="upsidedownspikes34" parent="." index="97" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes34" parent="." index="98" instance=ExtResource("8_ubefd")]
 position = Vector2(233, -613)
 
-[node name="upsidedownspikes35" parent="." index="98" instance=ExtResource("8_ubefd")]
+[node name="upsidedownspikes35" parent="." index="99" instance=ExtResource("8_ubefd")]
 position = Vector2(217, -613)
 
-[node name="scroll" parent="." index="99" instance=ExtResource("5_ukyqo")]
+[node name="scroll" parent="." index="100" instance=ExtResource("5_ukyqo")]
 position = Vector2(262, -29)
 
-[node name="scroll2" parent="." index="100" instance=ExtResource("5_ukyqo")]
+[node name="scroll2" parent="." index="101" instance=ExtResource("5_ukyqo")]
 position = Vector2(468, -27)
 
-[node name="scroll3" parent="." index="101" instance=ExtResource("5_ukyqo")]
+[node name="scroll3" parent="." index="102" instance=ExtResource("5_ukyqo")]
 position = Vector2(664, -33)
 
-[node name="scroll5" parent="." index="102" instance=ExtResource("5_ukyqo")]
+[node name="scroll5" parent="." index="103" instance=ExtResource("5_ukyqo")]
 position = Vector2(920, -302)
 
-[node name="scroll6" parent="." index="103" instance=ExtResource("5_ukyqo")]
+[node name="scroll6" parent="." index="104" instance=ExtResource("5_ukyqo")]
 position = Vector2(790, -303)
 
-[node name="scroll7" parent="." index="104" instance=ExtResource("5_ukyqo")]
+[node name="scroll7" parent="." index="105" instance=ExtResource("5_ukyqo")]
 position = Vector2(706, -236)
 
-[node name="scroll8" parent="." index="105" instance=ExtResource("5_ukyqo")]
+[node name="scroll8" parent="." index="106" instance=ExtResource("5_ukyqo")]
 position = Vector2(564, -234)
 
-[node name="scroll9" parent="." index="106" instance=ExtResource("5_ukyqo")]
+[node name="scroll9" parent="." index="107" instance=ExtResource("5_ukyqo")]
 position = Vector2(507, -281)
 
-[node name="scroll10" parent="." index="107" instance=ExtResource("5_ukyqo")]
+[node name="scroll10" parent="." index="108" instance=ExtResource("5_ukyqo")]
 position = Vector2(431, -285)
 
-[node name="scroll11" parent="." index="108" instance=ExtResource("5_ukyqo")]
+[node name="scroll11" parent="." index="109" instance=ExtResource("5_ukyqo")]
 position = Vector2(324, -284)
 
-[node name="scroll12" parent="." index="109" instance=ExtResource("5_ukyqo")]
+[node name="scroll12" parent="." index="110" instance=ExtResource("5_ukyqo")]
 position = Vector2(254, -283)
 
-[node name="scroll13" parent="." index="110" instance=ExtResource("5_ukyqo")]
+[node name="scroll13" parent="." index="111" instance=ExtResource("5_ukyqo")]
 position = Vector2(259, -447)
 
-[node name="scroll14" parent="." index="111" instance=ExtResource("5_ukyqo")]
+[node name="scroll14" parent="." index="112" instance=ExtResource("5_ukyqo")]
 position = Vector2(370, -443)
 
-[node name="scroll15" parent="." index="112" instance=ExtResource("5_ukyqo")]
+[node name="scroll15" parent="." index="113" instance=ExtResource("5_ukyqo")]
 position = Vector2(521, -448)
 
-[node name="scroll16" parent="." index="113" instance=ExtResource("5_ukyqo")]
+[node name="scroll16" parent="." index="114" instance=ExtResource("5_ukyqo")]
 position = Vector2(662, -446)
 
-[node name="scroll17" parent="." index="114" instance=ExtResource("5_ukyqo")]
+[node name="scroll17" parent="." index="115" instance=ExtResource("5_ukyqo")]
 position = Vector2(747, -448)
 
-[node name="scroll18" parent="." index="115" instance=ExtResource("5_ukyqo")]
+[node name="scroll18" parent="." index="116" instance=ExtResource("5_ukyqo")]
 position = Vector2(891, -749)
 
-[node name="scroll19" parent="." index="116" instance=ExtResource("5_ukyqo")]
+[node name="scroll19" parent="." index="117" instance=ExtResource("5_ukyqo")]
 position = Vector2(655, -602)
 
-[node name="scroll20" parent="." index="117" instance=ExtResource("5_ukyqo")]
+[node name="scroll20" parent="." index="118" instance=ExtResource("5_ukyqo")]
 position = Vector2(187, -607)
 
-[node name="AnotherPixelSign" type="Sprite2D" parent="." index="118"]
+[node name="AnotherPixelSign" type="Sprite2D" parent="." index="119"]
 position = Vector2(46, -136)
 scale = Vector2(0.205102, 0.0683673)
 texture = ExtResource("10_5p04n")
 
-[node name="Label" type="Label" parent="." index="119"]
+[node name="Label" type="Label" parent="." index="120"]
 modulate = Color(0, 0, 0, 1)
 offset_left = 12.0
 offset_top = -152.0
@@ -393,7 +399,7 @@ offset_bottom = -103.0
 text = "Supernerd's 
 Evil Airb&b"
 
-[node name="Nerdinator" type="Sprite2D" parent="." index="120"]
+[node name="Nerdinator" type="Sprite2D" parent="." index="121"]
 position = Vector2(1069, -834)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("11_5bfjs")

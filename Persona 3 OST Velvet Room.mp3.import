@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjgj8ws0xxn8b"
+path="res://.godot/imported/Persona 3 OST Velvet Room.mp3-6b8628f19dd56e1db01f2b2ac80c198d.mp3str"
+
+[deps]
+
+source_file="res://Persona 3 OST Velvet Room.mp3"
+dest_files=["res://.godot/imported/Persona 3 OST Velvet Room.mp3-6b8628f19dd56e1db01f2b2ac80c198d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

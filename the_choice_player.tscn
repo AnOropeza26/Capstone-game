@@ -442,7 +442,7 @@ movement_data = SubResource("Resource_xvloe")
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_6qlvs")
-volume_db = -30.0
+volume_db = -80.0
 
 [node name="BombExplosion" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_e0cq8")

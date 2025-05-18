@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7ebe27sq8trw"
+path="res://.godot/imported/Drake  - God's Plan - Beat⧸Instrumental.mp3-e03f1ffb6508928e497b49e1b52cb5ab.mp3str"
+
+[deps]
+
+source_file="res://Drake  - God's Plan - Beat⧸Instrumental.mp3"
+dest_files=["res://.godot/imported/Drake  - God's Plan - Beat⧸Instrumental.mp3-e03f1ffb6508928e497b49e1b52cb5ab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

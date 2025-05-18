@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://q8na5ph4evi2"
+path="res://.godot/imported/Nujabes - Lady Brown (feat. Cise Starr from CYNE) [Official Audio].mp3-ca19deb38876010caab5f03e0d23febf.mp3str"
+
+[deps]
+
+source_file="res://Nujabes - Lady Brown (feat. Cise Starr from CYNE) [Official Audio].mp3"
+dest_files=["res://.godot/imported/Nujabes - Lady Brown (feat. Cise Starr from CYNE) [Official Audio].mp3-ca19deb38876010caab5f03e0d23febf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

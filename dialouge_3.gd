@@ -10,7 +10,7 @@ var dialogue_items: Array[String] = [
 	"If you do....", 
 	"I WONT TURN THE BOMB OFF AND YOU WILL BE PERMANENTLY JELLY!!!", 
 	"My nerdinator...",
-	"It will make everyone in the city like me...",
+	"It will make everyone in the city just like me...",
 	"A WHOLE CITY OF SUPERNERDS",
 	"We will watch anime TOGETHER",
 	"We will hop on LOL TOGETHER",

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnd66ag3xks0p"
+path="res://.godot/imported/untitled 05 09.21.2014. - Kendrick Lamar (untitled unmastered).mp3-7f3698e512422ee74eb9b3a9eae9bdcd.mp3str"
+
+[deps]
+
+source_file="res://untitled 05 09.21.2014. - Kendrick Lamar (untitled unmastered).mp3"
+dest_files=["res://.godot/imported/untitled 05 09.21.2014. - Kendrick Lamar (untitled unmastered).mp3-7f3698e512422ee74eb9b3a9eae9bdcd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
