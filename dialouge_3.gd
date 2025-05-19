@@ -8,7 +8,7 @@ var dialogue_items: Array[String] = [
 	"Erm- h-how did you f-find me baka!", 
 	"YOU CANT STOP ME!!!", 
 	"If you do....", 
-	"I WONT TURN THE BOMB OFF AND YOU WILL BE PERMANENTLY JELLY!!!", 
+	"I WON'T TURN THE BOMB OFF AND YOU WILL BE PERMANENTLY JELLY!!!", 
 	"My nerdinator...",
 	"It will make everyone in the city just like me...",
 	"A WHOLE CITY OF SUPERNERDS",

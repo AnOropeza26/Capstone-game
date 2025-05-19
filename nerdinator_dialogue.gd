@@ -9,9 +9,8 @@ var dialogue_items: Array[String] = [
 	"EVERYONE IN THE CITY IS A SUPERNERD!", 
 	"THE NERDTOCRACY HAS BEGUN!", 
 	"....",
-	"Since you assisted me in my evil plan.",
+	"maybe won't be so jelly after all.",
 	"I will disable your bomb.",
-	"Now.",
 	"LETS PARTY"
 	
 ] 
