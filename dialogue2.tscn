@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbkt3d6iiahhp"]
+[gd_scene load_steps=6 format=3 uid="uid://dbkt3d6iiahhp"]
 
 [ext_resource type="Theme" uid="uid://x6pdhugge88m" path="res://main_theme.tres" id="1_lu456"]
-[ext_resource type="Script" path="res://dialouge_2.gd" id="2_4ww6y"]
+[ext_resource type="Script" path="res://dialogue_2.gd" id="2_4ww6y"]
 [ext_resource type="Texture2D" uid="uid://bd1bwdl3gua36" path="res://SuperNerd.png" id="3_4m1mo"]
+[ext_resource type="Texture2D" uid="uid://t2c0o6yepbns" path="res://moon_city_background.webp" id="3_7mpll"]
 [ext_resource type="AudioStream" uid="uid://bohwokw82sf68" path="res://Mario Judah - Die Very Rough [INSTRUMENTAL] (extracted from og song).mp3" id="4_d1drs"]
 
 [node name="Dialouge2" type="Control"]
@@ -12,6 +13,11 @@ offset_right = 57.0
 offset_bottom = 55.0
 theme = ExtResource("1_lu456")
 script = ExtResource("2_4ww6y")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(224.9, 183.9)
+scale = Vector2(0.879297, 0.723047)
+texture = ExtResource("3_7mpll")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true

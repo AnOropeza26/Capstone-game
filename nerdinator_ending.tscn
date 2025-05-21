@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://bmfa00miwnvmw"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_itdj5"]
-[ext_resource type="PackedScene" uid="uid://dbkt3d6iiahhp" path="res://dialouge2.tscn" id="2_hwemj"]
+[ext_resource type="PackedScene" uid="uid://dbkt3d6iiahhp" path="res://dialogue2.tscn" id="2_hwemj"]
 [ext_resource type="PackedScene" uid="uid://crvm2aonuqk75" path="res://tilemap_but_better.tscn" id="4_o3ybv"]
 [ext_resource type="Texture2D" uid="uid://c1i7qdy5due2a" path="res://stage.webp" id="4_ww5oh"]
 [ext_resource type="Texture2D" uid="uid://dilxgdcyvj7p5" path="res://Chipper1.webp" id="5_rstyn"]
-[ext_resource type="PackedScene" path="res://level_completed.tscn" id="6_6hcmy"]
+[ext_resource type="PackedScene" uid="uid://cchjaw72ru86h" path="res://level_completed.tscn" id="6_6hcmy"]
 [ext_resource type="PackedScene" uid="uid://b31kjqxxmrxq0" path="res://nerdinator_player.tscn" id="6_aw5x8"]
 [ext_resource type="PackedScene" uid="uid://bgnwe2iomrt7i" path="res://super_nerd.tscn" id="7_o34tu"]
 [ext_resource type="Texture2D" uid="uid://oq43yp5rblv0" path="res://Bass.png" id="8_f2n3k"]
@@ -100,3 +100,10 @@ position = Vector2(-245, 223)
 
 [node name="NerdinatorPlayer" parent="." instance=ExtResource("6_aw5x8")]
 position = Vector2(-298, 226)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -230.0
+offset_top = 65.0
+offset_right = -114.0
+offset_bottom = 88.0
+text = "Buck E. Cheese"

@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://dh856r7edim8o"]
 
 [ext_resource type="PackedScene" uid="uid://cpn74fv20jbhv" path="res://worldcopy.tscn" id="1_f8eol"]
-[ext_resource type="PackedScene" uid="uid://n7ujirekpuuq" path="res://dialouge_3.tscn" id="2_xbns5"]
+[ext_resource type="PackedScene" uid="uid://n7ujirekpuuq" path="res://dialogue_3.tscn" id="2_xbns5"]
 [ext_resource type="Texture2D" uid="uid://t2c0o6yepbns" path="res://moon_city_background.webp" id="3_vy6r6"]
 [ext_resource type="PackedScene" uid="uid://crvm2aonuqk75" path="res://tilemap_but_better.tscn" id="4_dl40k"]
 [ext_resource type="PackedScene" uid="uid://dbhhmjprxmya2" path="res://scroll.tscn" id="5_ukyqo"]
@@ -31,14 +31,14 @@ position = Vector2(461, -150)
 scale = Vector2(0.753333, 0.640833)
 
 [node name="Player" parent="." index="3"]
-position = Vector2(22, -30.0001)
+position = Vector2(64.0001, -41.0001)
 
 [node name="scroll4" parent="." index="5" instance=ExtResource("5_ukyqo")]
 position = Vector2(899, -35)
 
 [node name="Untitled0509_21_2014_-KendrickLamar(untitledUnmastered)" type="AudioStreamPlayer" parent="." index="6"]
 stream = ExtResource("6_ysjxs")
-volume_db = -15.0
+volume_db = -5.0
 autoplay = true
 
 [node name="lava" parent="." index="7" instance=ExtResource("7_4e3sx")]

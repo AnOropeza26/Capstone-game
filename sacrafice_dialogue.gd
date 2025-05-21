@@ -7,8 +7,8 @@ var dialogue_items: Array[String] = [
 	"Take that!",  
 	"Supernerd?",
 	"More like", 
-	"STUPIDNERD!", 
-	"im gonna be so jelly😜😜😜",
+	"SUPERFREAK😜😜😜!", 
+	
 	
 	
 ] 

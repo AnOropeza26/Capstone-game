@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1g7dm4fvvec0"]
+[gd_scene load_steps=7 format=3 uid="uid://b1g7dm4fvvec0"]
 
 [ext_resource type="Theme" uid="uid://x6pdhugge88m" path="res://main_theme.tres" id="1_pxg0m"]
 [ext_resource type="Script" path="res://nerdinator_dialogue.gd" id="2_kt14y"]
+[ext_resource type="Texture2D" uid="uid://d10hbamt4stup" path="res://istockphoto-1177234024-612x612.jpg" id="3_emun1"]
 [ext_resource type="Texture2D" uid="uid://bd1bwdl3gua36" path="res://SuperNerd.png" id="4_jhek8"]
 [ext_resource type="AudioStream" uid="uid://dlngxixhrp6q7" path="res://evangelion-laster-explosion.mp3" id="4_wubwp"]
 [ext_resource type="AudioStream" uid="uid://bjcy0p040h41" path="res://Ultra Instinct Theme (Official Version).mp3" id="5_oualf"]
@@ -13,6 +14,11 @@ offset_right = 57.0
 offset_bottom = 55.0
 theme = ExtResource("1_pxg0m")
 script = ExtResource("2_kt14y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(224, 175)
+scale = Vector2(0.74183, 0.575163)
+texture = ExtResource("3_emun1")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true

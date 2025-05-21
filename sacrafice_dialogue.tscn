@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://co1uap7l4wtih"]
+[gd_scene load_steps=7 format=3 uid="uid://co1uap7l4wtih"]
 
 [ext_resource type="Theme" uid="uid://x6pdhugge88m" path="res://main_theme.tres" id="1_dsenv"]
 [ext_resource type="Script" path="res://sacrafice_dialogue.gd" id="2_xokab"]
+[ext_resource type="Texture2D" uid="uid://og71pngqsnld" path="res://36985a7d2b0ec10949a21e888e6538c8.jpg" id="3_trx5a"]
 [ext_resource type="Texture2D" uid="uid://ddc7lejpcclyg" path="res://firstplayer-export.png" id="3_yx2ns"]
 [ext_resource type="AudioStream" uid="uid://brd6ac8j64k6i" path="res://strongpunch.mp3" id="4_odwxy"]
 [ext_resource type="AudioStream" uid="uid://vj8t8kwxm51o" path="res://You Are My Starship.mp3" id="5_vo4sw"]
@@ -13,6 +14,11 @@ offset_right = 57.0
 offset_bottom = 55.0
 theme = ExtResource("1_dsenv")
 script = ExtResource("2_xokab")
+
+[node name="36985a7d2b0Ec10949a21e888e6538c8" type="Sprite2D" parent="."]
+position = Vector2(225.75, 154)
+scale = Vector2(0.621603, 0.742527)
+texture = ExtResource("3_trx5a")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true

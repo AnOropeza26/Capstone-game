@@ -14,7 +14,7 @@ next_level = ExtResource("2_a1nfl")
 
 [node name="PharrellWilliams-ThatGirl-KaraokeInstrumentalFeatSnoopDogg&CharlieWilson2021" type="AudioStreamPlayer" parent="." index="0"]
 stream = ExtResource("3_xh1xe")
-volume_db = -15.0
+volume_db = -20.0
 autoplay = true
 
 [node name="Parallax2D" type="Parallax2D" parent="." index="1"]

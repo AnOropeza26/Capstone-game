@@ -1,23 +1,23 @@
 [gd_scene load_steps=6 format=3 uid="uid://dur7ltmn4xguj"]
 
-[ext_resource type="Theme" uid="uid://x6pdhugge88m" path="res://main_theme.tres" id="1_b14hj"]
-[ext_resource type="Script" path="res://dialouge.gd" id="2_n6a7n"]
-[ext_resource type="Texture2D" uid="uid://ca7epcq40qkhb" path="res://alleyway.jpeg" id="3_lw221"]
-[ext_resource type="Texture2D" uid="uid://ddc7lejpcclyg" path="res://firstplayer-export.png" id="4_2elq6"]
-[ext_resource type="AudioStream" uid="uid://c7ebe27sq8trw" path="res://Drake  - God's Plan - Beat⧸Instrumental.mp3" id="5_gxkhm"]
+[ext_resource type="Theme" uid="uid://x6pdhugge88m" path="res://main_theme.tres" id="1_t25ih"]
+[ext_resource type="Script" path="res://dialogue.gd" id="2_87g4y"]
+[ext_resource type="Texture2D" uid="uid://ca7epcq40qkhb" path="res://alleyway.jpeg" id="3_me71h"]
+[ext_resource type="Texture2D" uid="uid://ddc7lejpcclyg" path="res://firstplayer-export.png" id="4_11qaq"]
+[ext_resource type="AudioStream" uid="uid://c7ebe27sq8trw" path="res://Drake  - God's Plan - Beat⧸Instrumental.mp3" id="5_jpm87"]
 
 [node name="Dialouge" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 57.0
 offset_bottom = 55.0
-theme = ExtResource("1_b14hj")
-script = ExtResource("2_n6a7n")
+theme = ExtResource("1_t25ih")
+script = ExtResource("2_87g4y")
 
 [node name="Alleyway" type="Sprite2D" parent="."]
 position = Vector2(231, 127)
 scale = Vector2(3, 3)
-texture = ExtResource("3_lw221")
+texture = ExtResource("3_me71h")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
@@ -29,7 +29,7 @@ offset_left = 157.0
 offset_top = 117.0
 offset_right = -62.222
 offset_bottom = -66.47
-theme = ExtResource("1_b14hj")
+theme = ExtResource("1_t25ih")
 text = "  Hello world Im stuck in the sewer so take control of me   and get out! 3:"
 fit_content = true
 
@@ -52,9 +52,9 @@ text = "Next"
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(82, 163)
 scale = Vector2(0.08, 0.08)
-texture = ExtResource("4_2elq6")
+texture = ExtResource("4_11qaq")
 
 [node name="Drake-God\'sPlan-Beat⧸instrumental" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_gxkhm")
+stream = ExtResource("5_jpm87")
 volume_db = -15.0
 autoplay = true

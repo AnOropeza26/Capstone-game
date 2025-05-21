@@ -11,7 +11,7 @@ var dialogue_items: Array[String] = [
 	"....",
 	"maybe won't be so jelly after all.",
 	"I will disable your bomb.",
-	"LETS PARTY"
+	"It's bucking time"
 	
 ] 
 

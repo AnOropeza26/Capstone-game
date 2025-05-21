@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://co1uap7l4wtih" path="res://sacrafice_dialogue.tscn" id="2_ywhc7"]
 [ext_resource type="AudioStream" uid="uid://bjgj8ws0xxn8b" path="res://Persona 3 OST Velvet Room.mp3" id="3_bnxt1"]
 [ext_resource type="PackedScene" uid="uid://crvm2aonuqk75" path="res://tilemap_but_better.tscn" id="3_rsn6q"]
-[ext_resource type="PackedScene" path="res://level_completed.tscn" id="4_mmany"]
+[ext_resource type="PackedScene" uid="uid://cchjaw72ru86h" path="res://level_completed.tscn" id="4_mmany"]
 [ext_resource type="PackedScene" uid="uid://cugjwnug3tg1f" path="res://the_choice_player.tscn" id="4_x10wn"]
 [ext_resource type="PackedScene" uid="uid://bx3iof63k4tol" path="res://supernerd_the_choice.tscn" id="6_tu11h"]
 [ext_resource type="PackedScene" uid="uid://det7aq5w31xx0" path="res://nerdinator_the_choice.tscn" id="7_noneq"]
@@ -44,7 +44,7 @@ offset_bottom = 127.0
 text = "Save Everyone"
 
 [node name="TheChoicePlayer" parent="." instance=ExtResource("4_x10wn")]
-position = Vector2(-179, 183)
+position = Vector2(-179, 189)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

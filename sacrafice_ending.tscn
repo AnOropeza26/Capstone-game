@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://dghrkvndh4pb5"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_y57il"]
-[ext_resource type="PackedScene" uid="uid://dbkt3d6iiahhp" path="res://dialouge2.tscn" id="2_hecop"]
+[ext_resource type="PackedScene" uid="uid://dbkt3d6iiahhp" path="res://dialogue2.tscn" id="2_hecop"]
 [ext_resource type="Texture2D" uid="uid://gi30s4kjjtkg" path="res://Free-City-Backgrounds-Pixel-Art2.png" id="3_sp3bl"]
-[ext_resource type="PackedScene" path="res://level_completed.tscn" id="4_0f8em"]
+[ext_resource type="PackedScene" uid="uid://cchjaw72ru86h" path="res://level_completed.tscn" id="4_0f8em"]
 [ext_resource type="PackedScene" uid="uid://d1brb4yj82uxg" path="res://parachute_player.tscn" id="4_o4e6s"]
 [ext_resource type="AudioStream" uid="uid://dmts8m53fwax4" path="res://The Isley Brothers - Voyage to Atlantis (Official Audio).mp3" id="5_bdpci"]
 [ext_resource type="PackedScene" uid="uid://mtba8d40nobb" path="res://blow_up.tscn" id="5_p6hwj"]
@@ -78,7 +78,7 @@ text = "           Art
 
 [node name="TheIsleyBrothers-VoyageToAtlantis(officialAudio)" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_bdpci")
-volume_db = -15.0
+volume_db = -10.0
 autoplay = true
 
 [node name="ParachutePlayer" parent="." instance=ExtResource("4_o4e6s")]
